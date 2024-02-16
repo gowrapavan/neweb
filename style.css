@@ -8,7 +8,7 @@
   width: 200px; /* Adjust according to your needs */
   height: 200px; /* Adjust according to your needs */
   overflow: hidden;
-  border-radius: 60%; /* Make it circular */
+  border-radius: 50%; /* Make it circular */
 }
 .circular-image {
   width: 100%;
