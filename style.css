@@ -17,6 +17,7 @@ background-color: #cccccc;
   background-repeat: no-repeat;
   background-size:cover;
   background-position:center;
+  background-attachment: fixed;
   animation:animateBg 5s linear infinite;
 }
 @keyframes animateBg {
