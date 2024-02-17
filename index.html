@@ -4,23 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gowra</title>
-    <link rel="wedsite icon" type="png" href="letter-g.png" >
-     <script>
-    document.getElementById('login-form').addEventListener('submit', function(event) {
-      event.preventDefault();
-      const email = document.getElementById('email').value;
-      const password = document.getElementById('password').value;
-
-      if (email === '218x1a1227@khitguntur.ac.in' && password === '218x1a1227' || email === '218x1a1244@khitguntur.ac.in' && password === '218x1a1244' || email === '218x1a1236@khitguntur.ac.in' && password === '218x1a1236' || email === '218x1a1207@khitguntur.ac.in' && password === '218x1a1207' ) {
-        window.location.href = 'https://nothing10.mydurable.com/';
-      } else {
-        alert('Invalid Email or Password');
-      }
-    });
-  </script>
-
+    <link rel="wedsite icon" type="png" href="letter-g.png">
+    <link rel="stylesheet" href="style.css">
 </head>
-<link rel="stylesheet" href="style.css">
 <body>
     <div class="wrapper">
 
@@ -32,7 +18,7 @@
               <span class="icon">
                 <ion-icon name="mail"></ion-icon>
               </span>
-              <input type="email" required>
+              <input type="email" id="email" required>
               <label>Email</label>
             </div>
       
@@ -40,7 +26,7 @@
               <span class="icon">
                 <ion-icon name="lock-closed"></ion-icon>
               </span>
-              <input type="password" required>
+              <input type="password" id="password" required>
               <label>Password</label>
             </div>
       
@@ -49,7 +35,7 @@
               <a href="#">Forgot Password?</a>
             </div>
       
-            <button type="submit" >Login</button>
+            <button type="submit">Login</button>
       
             <div class="register-link">
               <p>Don't have an account? <a href="#">Register</a></p>
@@ -59,6 +45,20 @@
       
       </div>
     
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+          event.preventDefault();
+          const email = document.getElementById('email').value;
+          const password = document.getElementById('password').value;
+
+          if (email === '218x1a1227@khitguntur.ac.in' && password === '218x1a1227' || email === '218x1a1244@khitguntur.ac.in' && password === '218x1a1244' || email === '218x1a1236@khitguntur.ac.in' && password === '218x1a1236' || email === '218x1a1207@khitguntur.ac.in' && password === '218x1a1207' ) {
+            window.location.href = 'https://nothing10.mydurable.com/';
+          } else {
+            alert('Invalid Email or Password');
+          }
+        });
+    </script>
 
 </body>
 </html>
