@@ -59,25 +59,35 @@
             window.location.href = 'https://nothing10.mydurable.com/';
           }
           else {
-const body = document.querySelector('body');
-            const filter = document.createElement('filter');
-            filter.id = 'blur';
-            filter.innerHTML = `
-              <feGaussianBlur in="SourceGraphic" stdDeviation="5"/>
-            `;
-            body.appendChild(filter);
-            body.style.filter = 'url(#blur)';
-            body.style.-webkit-filter = 'blur(5px)';
+              const body = document.querySelector('body');
+  const filter = document.createElement('filter');
+  filter.id = 'blur';
+  filter.innerHTML = `
+    <feGaussianBlur in="SourceGraphic" stdDeviation="5"/>
+  `;
+  body.appendChild(filter);
+  body.style.filter = 'url(#blur)';
+  body.style.webkitFilter = 'blur(5px)';
 
-            Swal.fire({
-              title: 'Invalid',
-              text: 'User's Email or Password is Invalid',
-              icon: 'info',
-              confirmButtonText: 'OK',
-              background: 'transparent !important',
-              width: 300,
-              backdrop: `
-                rgba(0,0,123,0.4) }
+  Swal.fire({
+    title: 'Invalid',
+    text: 'User's Email or Password is Invalid',
+    icon: 'info',
+    confirmButtonText: 'OK',
+    background: 'transparent !important',
+    width: 300,
+    backdrop: `
+      rgba(0,0,123,0.4)   `,
+    customClass: {
+      popup: 'sweetalert2-popup-blur'
+    }
+  }).then(() => {
+    body.removeChild(filter);
+    body.style.filter = '';
+    body.style.webkitFilter = '';
+  });
+}
+                
         });
     </script>
 
