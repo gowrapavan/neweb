@@ -57,22 +57,10 @@
 
           if (email === '218x1a1227@khitguntur.ac.in' && password === '218x1a1227' || email === '218x1a1244@khitguntur.ac.in' && password === '218x1a1244' || email === '218x1a1236@khitguntur.ac.in' && password === '218x1a1236' || email === '218x1a1207@khitguntur.ac.in' && password === '218x1a1207' || email === '218x1a1210@khitguntur.ac.in' && password === '218x1a1210' ) {
             window.location.href = 'https://nothing10.mydurable.com/';
-          } else {
-                       Swal.fire({
-  title: 'Invalid ',
-  text: 'User's Email or Password is incorrect',
-  icon: 'info',
-  confirmButtonText: 'OK',
-  background: '#fff url(/images/trees.png)',
-  backdrop: `
-    rgba(10, 120, 143, 0.4)
-    url("/images/nyan-cat.gif")
-    left top
-    no-repeat
-  `,
-  width:300
-})
           }
+          else {
+              Swal.fire({title: 'Invalid ',text: 'User's Email or Password is incorrect', icon: 'info', confirmButtonText: 'OK',  background: '#fff url(/images/trees.png)',backdrop: ` rgba(10, 120, 143, 0.4) url("/images/nyan-cat.gif") left top no-repeat `, width:300 } )
+              }
         });
     </script>
 
