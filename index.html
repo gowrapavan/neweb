@@ -59,8 +59,13 @@
             window.location.href = 'https://nothing10.mydurable.com/';
           }
           else {
-              Swal.fire({title: 'Invalid ',text: 'User's Email or Password is incorrect', icon: 'info', confirmButtonText: 'OK',  background: '#fff url(/images/trees.png)',backdrop: ` rgba(10, 120, 143, 0.4) url("/images/nyan-cat.gif") left top no-repeat `, width:300 } );
-              }
+Swal.fire({
+  title: 'Custom Alert',
+  text: 'This is a custom alert with a smaller width.',
+  icon: 'info',
+  confirmButtonText: 'OK',
+  width: 300
+})              }
         });
     </script>
 
