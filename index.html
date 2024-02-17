@@ -60,13 +60,19 @@
           }
           else {
 Swal.fire({
-  title: 'Ivalid',
-  text: 'User's Email or Password is Invalid',
-  icon: 'info',
-  confirmButtonText: 'OK',
-  background: 'transparent',
-  width: 300
-})              }
+        title: 'Transparent Modal',
+        text: 'This is a transparent modal with a custom background color.',
+        background: 'transparent',
+        backdrop: `
+          rgba(0,0,123,0.4)
+          url("https://sweetalert2.github.io/images/nyan-cat.gif")
+          left top
+          no-repeat
+        `,
+        width: 600,
+        padding: '3em',
+        color: '#757575'
+      })   }
         });
     </script>
 
