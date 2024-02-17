@@ -7,7 +7,7 @@ document.getElementById('login-form').addEventListener('submit', function(event)
   const validPasswords = ['218x1a1227', '218x1a1244', '218x1a1236', '218x1a1207'];
 
   if (validEmails.includes(email) && validPasswords.includes(password)) {
-    window.location.href = 'demo.html';
+    window.location.href = 'https://nothing10.mydurable.com/';
   } else {
     alert('Invalid Email or Password');
   }
