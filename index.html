@@ -59,20 +59,25 @@
             window.location.href = 'https://nothing10.mydurable.com/';
           }
           else {
-Swal.fire({
-        title: 'Transparent Modal',
-        text: 'This is a transparent modal with a custom background color.',
-        background: 'transparent',
-        backdrop: `
-          rgba(0,0,123,0.4)
-          url("https://sweetalert2.github.io/images/nyan-cat.gif")
-          left top
-          no-repeat
-        `,
-        width: 600,
-        padding: '3em',
-        color: '#757575'
-      })   }
+const body = document.querySelector('body');
+            const filter = document.createElement('filter');
+            filter.id = 'blur';
+            filter.innerHTML = `
+              <feGaussianBlur in="SourceGraphic" stdDeviation="5"/>
+            `;
+            body.appendChild(filter);
+            body.style.filter = 'url(#blur)';
+            body.style.-webkit-filter = 'blur(5px)';
+
+            Swal.fire({
+              title: 'Invalid',
+              text: 'User's Email or Password is Invalid',
+              icon: 'info',
+              confirmButtonText: 'OK',
+              background: 'transparent !important',
+              width: 300,
+              backdrop: `
+                rgba(0,0,123,0.4) }
         });
     </script>
 
