@@ -58,9 +58,9 @@
             window.location.href = 'https://nothing10.mydurable.com/';
           } else {
             Swal.fire({
-  title: 'Custom Alert',
-  text: 'This is a custom alert with a different style and behavior than the default browser alert.',
-  icon: 'info',
+  title: 'Invalid',
+  text: 'User's Email or Password is invalid',
+  icon: 'invalid',
   confirmButtonText: 'OK',
   background: '#fff url(/images/trees.png)',
   backdrop: `
@@ -68,6 +68,7 @@
     url("/images/nyan-cat.gif")
     left top
     no-repeat
+    width: 300
   `
 })
           }
