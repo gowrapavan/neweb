@@ -7,6 +7,15 @@
     <link rel="wedsite icon" type="png" href="letter-g.png">
     <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+  .sweet-alert2-container {
+    filter: blur(5px);
+  }
+
+  .sweet-alert2-blur {
+    filter: blur(0);
+  }
+</style>
      
 
 </head>
@@ -49,46 +58,36 @@
       </div>
     
 
-    <script>
-        document.getElementById('login-form').addEventListener('submit', function(event) {
-          event.preventDefault();
-          const email = document.getElementById('email').value;
-          const password = document.getElementById('password').value;
+  <script>
+  document.getElementById('login-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
 
-          if (email === '218x1a1227@khitguntur.ac.in' && password === '218x1a1227' || email === '218x1a1244@khitguntur.ac.in' && password === '218x1a1244' || email === '218x1a1236@khitguntur.ac.in' && password === '218x1a1236' || email === '218x1a1207@khitguntur.ac.in' && password === '218x1a1207' || email === '218x1a1210@khitguntur.ac.in' && password === '218x1a1210' ) {
-            window.location.href = 'https://nothing10.mydurable.com/';
-          }
-          else {
-
-const body = document.querySelector('body');
-  const filter = document.createElement('filter');
-  filter.id = 'blur';
-  filter.innerHTML = `
-    <feGaussianBlur in="SourceGraphic" stdDeviation="5"/>
-  `;
-  body.appendChild(filter);
-  body.style.filter = 'url(#blur)';
-  body.style.webkitFilter = 'blur(5px)';
-               Swal.fire({
-    title: 'Invalid',
-    text: 'User\'s Email or Password is Invalid',
-    icon: 'info',
-    confirmButtonText: 'OK',
-    background: 'transparent !important',
-    width: 300
-               }
-   
-              
-
-
-
-
-              
-          }
-              
-                
-        });
-    </script>
+    if (
+      email === '218x1a1227@khitguntur.ac.in' && password === '218x1a1227' ||
+      email === '218x1a1244@khitguntur.ac.in' && password === '218x1a1244' ||
+      email === '218x1a1236@khitguntur.ac.in' && password === '218x1a1236' ||
+      email === '218x1a1207@khitguntur.ac.in' && password === '218x1a1207' ||
+      email === '218x1a1210@khitguntur.ac.in' && password === '218x1a1210'
+    ) {
+      window.location.href = 'https://nothing10.mydurable.com/';
+    } else {
+      Swal.fire({
+        title: 'Invalid',
+        text: 'User\'s Email or Password is Invalid',
+        icon: 'error',
+        confirmButtonText: 'OK',
+        background: 'transparent !important',
+        width: 300
+      });
+      document.querySelector('.sweet-alert2-container').classList.add('sweet-alert2-blur');
+      setTimeout(function() {
+        document.querySelector('.sweet-alert2-container').classList.remove('sweet-alert2-blur');
+      }, 2000);
+    }
+  });
+</script>
 
 </body>
 </html>
