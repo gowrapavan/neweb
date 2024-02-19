@@ -2,32 +2,56 @@
 <html>
 <head>
     <title>Gowra</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
     <style>
+      * {
+        box-sizing: border-box;
+    }
         body {
-            background-image: url('img2.jpg');
+            background-image: url('bak.jpg');
+            background-color:#0c0c0c;
     background-repeat: repeat; 
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
     font-family: Arial, sans-serif;
+
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh
+
 }
 .header {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     padding: 15px;
     background-color:transparent;
+    background: linear-gradient(rgba(37, 26, 26, 0.9), transparent);
     border-radius: 50px 0 0 50px;
-    box-shadow: 0 2px 4px rgba(238, 231, 231, 0.87);
+     box-shadow: 2px 2px 2px 4px rgba(255, 253, 253, 0.2);
+
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+
 }
 
 .content {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 100px auto 0;
     padding: 50px;
     text-align: center;
-    color: #e7dede;
+    color: #ffffff;
+    
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 h1 {
@@ -37,7 +61,10 @@ h1 {
 
 p {
     font-size: 1.5rem;
-    margin-bottom: 40px;
+    margin-bottom: 100px;
+    margin-right: -200px;
+    margin-left: -200px;
+    text-align: left;
 }
 
 .button-group {
@@ -50,38 +77,114 @@ p {
 .button {
     margin-left: 5px;
     color: #ffffff;
-    padding: 3px 9px;
+    padding: 0.5rem 1rem ;
     background-color: #000000;
     border-radius: 10px 0px 10px 0px;
-    font-size: 1rem;
+    font-size: 1.3rem;
     box-shadow: 0 2px 4px rgba(238, 231, 231, 0.87);
     transition: background-color 0.3s ease;
 }
-
-
 .button:hover {
     background-color: #ffffff;
     color: #030303;
 }
 .container{
-    width: 48x;
+    width: 40x;
     height: 420px;
+    padding-bottom: 150px;
+    display: fixed;
+    justify-content: center;
+
 }
+
+
+
+
+
+.ybutton {
+  padding: 0.5rem 1rem  ;
+  padding-top: 1rem;;
+  background-color: #000000;
+  border-radius: 10px 0px 10px 0px;
+  font-size: 1.3rem;
+  color: #ffffff;
+}
+
+main {
+  padding-top: 50px; /* Add top padding to the main content area to account for the height of the header */
+}
+.header .logo-container .site-title .first-letter {
+  font-family: 'Alex Brush', cursive;
+  font-size: 1.5em;
+}
+.first-letter {
+  font-family: 'Alex Brush', cursive;
+  font-size: 1.5em;
+}
+.rest-of-text {
+  font-family: 'Lucidity Expand', sans-serif;
+}
+.site-title {
+  font-size: 1.5rem;
+  margin-left: 10px;
+  text-transform: uppercase;
+  color: #fefcfc;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  height: 50px;
+  width: auto;
+}
+
+
+
+
+
+
     </style>
 </head>
 <body>
     <div class="header">
-        <div class="button-group">
+        
+
+
+      <div class="logo-container">
+        <img class="logo" src="rg.png" alt="logo">
+        <span class="site-title">
+          <span class="first-letter"> G</span>
+        <span class="rest-of-text">OWRA</span>
+        </span>
+      </div>
+ 
+
+
+       <div class="button-group">
            <a href="index.html"> <button class="button">Home</button></a>
         <a href  ="Login.html"><button class="button">Login</button></a>
         <button class="button">About Us</button>
         </div>
-        
-    </div>
+
     <div class="content">
-        <h1><br>Welcome to My New Webpage</h1>
-        <p>This is a Nigga home page with a black background image.</p>
+        <h1><br>Hey,<br>Welcome to My Web</h1>
+        <p>Embark on your coding journey effortlessly! Here, we're dedicated to making learning various coding languages a breeze. Dive into the world of programming and unravel the mysteries of different coding languages with ease.<br><br>
+          Whether you're a beginner or a seasoned developer, our site offers a user-friendly platform designed to simplify the learning process. From Python to Java, HTML to CSS, we've got you covered.<br><br>
+          Get ready to explore, experiment, and expand your coding skills like never before. Happy coding! 💻✨</p>
         <div class="container">
-            <iframe autoplay width="100%" height="100%" src="https://www.youtube.com/embed/ByAn8DF8Ykk?si=g099k_XaurdDohOT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/sWoMNeHRcnk?si=exXdWgmEhn-4T5GP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="ybutton-group"> <br>
+            <a href  ="Login.html"><button class="ybutton">HTML</button></a>
             </div>
+        </div>
+        <div class="container">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/_uQrJ0TkZlc?si=E0FsvccwzB6NiTWM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>            <div class="ybutton-group"> 
+            <a href  ="Login.html"><br><button class="ybutton">Python</button></a>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
 </html>
