@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gowra</title>
+    <link rel="wedsite icon" type="png" href="letter-g.png">
+    <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+  .sweet-alert2-container {
+    filter: blur(5px);
+  }
+
+  .sweet-alert2-blur {
+    filter: blur(0);
+  }
+</style>
+     
+
+</head>
+<body>
+    <div class="wrapper">
+
+        <div class="login-box">
+          <form id="login-form">
+            <h2>Login</h2>
+      
+            <div class="input-box">
+              <span class="icon">
+                <ion-icon name="mail"></ion-icon>
+              </span>
+              <input type="email" id="email" required>
+              <label>Email</label>
+            </div>
+      
+            <div class="input-box">
+              <span class="icon">
+                <ion-icon name="lock-closed"></ion-icon>
+              </span>
+              <input type="password" id="password" required>
+              <label>Password</label>
+            </div>
+      
+            <div class="remember-forgot">
+              <label><input type="checkbox"> Remember me</label>
+              <a href="#">Forgot Password?</a>
+            </div>
+      
+            <button type="submit">Login</button>
+      
+            <div class="register-link">
+              <p>Don't have an account? <a href="https://chat.openai.com/c/27f511b8-9928-4e57-b98b-a38d09ea0461">Register</a></p>
+            </div>
+          </form>
+        </div>
+      
+      </div>
+    
+
+  <script>
+  document.getElementById('login-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    if (
+      email === '218x1a1227@khitguntur.ac.in' && password === '218x1a1227' ||
+      email === '218x1a1244@khitguntur.ac.in' && password === '218x1a1244' ||
+      email === '218x1a1236@khitguntur.ac.in' && password === '218x1a1236' ||
+      email === '218x1a1207@khitguntur.ac.in' && password === '218x1a1207' ||
+      email === '218x1a1210@khitguntur.ac.in' && password === '218x1a1210'
+    ) {
+      window.location.href = 'https://nothing10.mydurable.com/';
+    } else {
+      Swal.fire({
+        title: 'Invalid',
+        text: 'User\'s Email or Password is Invalid',
+        icon: 'error',
+        confirmButtonText: 'OK',
+        background: 'transparent !important',
+        width: 300
+      });
+      document.querySelector('.sweet-alert2-container').classList.add('sweet-alert2-blur');
+      setTimeout(function() {
+        document.querySelector('.sweet-alert2-container').classList.remove('sweet-alert2-blur');
+      }, 2000);
+    }
+  });
+</script>
+
+</body>
+</html>
