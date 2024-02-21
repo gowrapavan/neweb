@@ -8,13 +8,15 @@
         box-sizing: border-box;
     }
         body {
-            background-image: url('in.jpg');
-    background-repeat: repeat; 
+          background-image: url('pic.png');
+          
+
+    background-repeat: no-repeat; 
     background-size: cover;
     background-attachment: fixed;
-    background-position: center;
+    background-position: absolute;    
     font-family: Arial, sans-serif;
-
+    padding: 0;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -22,14 +24,15 @@
 
 }
 .header {
+  size: 1rem;
     position: fixed;
     top: 0;
     right: 0;
     padding: 15px;
     background-color:transparent;
-    background: linear-gradient(rgba(37, 26, 26, 0.9), transparent);
+    background: linear-gradient(to top ,  rgb(14, 3, 25),transparent);
     border-radius: 50px 0 0 50px;
-     box-shadow: 2px 2px 2px 4px rgba(255, 253, 253, 0.2);
+     box-shadow: 2px 2px 2px 4px rgb(16, 8, 8);
 
     z-index: 100;
     width: 100%;
@@ -54,12 +57,12 @@
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin-bottom: 20px;
 }
 
 p {
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-bottom: 100px;
     margin-right: -100px;
     margin-left: -100px;
@@ -88,25 +91,41 @@ p {
     color: #030303;
 }
 .container{
-    width: 40x;
-    height: 420px;
+    
     padding-bottom: 150px;
     display: fixed;
     justify-content: center;
+    border-radius: 50px 0 0 50px;
+    
 
 }
 
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+}
 
 
 
 
 .ybutton {
   padding: 0.5rem 1rem  ;
+  
   padding-top: 0.5rem;;
-  background-color: #000000;
+  background-color: #666363;
   border-radius: 10px 0px 10px 0px;
   font-size: 1.3rem;
   color: #ffffff;
+}
+.ybutton:hover {
+  background-color: #ffffff;
+  color: #030303;
 }
 
 main {
@@ -139,6 +158,22 @@ main {
 }
 
 
+#background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-image: url(1.png), url(2.png);
+  background-position: center center, left top;
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, contain;
+}
+
+
+
+
 
 
 
@@ -163,30 +198,43 @@ main {
       <div class="button-group"> 
         <a href="index.html">  <button class="button">Home</button></a>
           <a href="Login.html"> <button class="button">Login</button></a>
-        <a href="https://nothing10.mydurable.com/"><button class="button">About Us</button></a>
+        <button class="button">About Us</button>
         </div>
         
     </div>
 
+    
+
 
     <div class="content">
-        <h1><br>Hey,<br>Welcome to My Webpage</h1>
+        <h1>Hey,<br>Welcome to My Web</h1>
         <p>Start your coding adventure, with ease! Here we're committed to ensuring that learning programming languages is straightforward. Delve into the realm of coding. Uncover the secrets of programming languages effortlessly.<br><br>
-Whether you're just starting out or an experienced coder our website provides a user environment tailored to streamline the learning journey. From Python to Java, HTML to CSS we've got everything you need.<br><br>
-Prepare to discover try things and enhance your coding abilities like never before. Enjoy your coding experience!, 💻✨
-</p>
+
+          Whether you're just starting out or an experienced coder our website provides a user environment tailored to streamline the learning journey. From Python to Java, HTML to CSS we've got everything you need.
+          <br><br>
+          Prepare to discover try things and enhance your coding abilities like never before. Enjoy your coding experience!, 💻✨</p>
         <div class="container">
           <iframe width="560" height="315" src="https://www.youtube.com/embed/sWoMNeHRcnk?si=exXdWgmEhn-4T5GP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             <div class="ybutton-group"> <br>
-              <a href="Login.html"> <button class="ybutton">HTML</button></a>
+              <a href="index.html"> <button class="ybutton">HTML</button></a>
             </div>
         </div>
         <div class="container">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/_uQrJ0TkZlc?si=E0FsvccwzB6NiTWM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>            <div class="ybutton-group"> 
-            <a href="Login.html"> <br><button class="ybutton">Python</button></a>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/_uQrJ0TkZlc?si=E0FsvccwzB6NiTWM" title="YouTube video player" frameborder="0" allow="accelerometer; caption-on;autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>            <div class="ybutton-group"> 
+            <a href="index.html"> <br><button class="ybutton">Python</button></a>
             </div>
         </div>
     </div>
+
+
+    <script>
+      window.addEventListener('scroll', function() {
+        var eagle = document.getElementById('eagle');
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        eagle.style.backgroundPosition = 'bottom ' + (scrollTop * 0.5) + 'px';
+      });
+    </script>
+
 
     
 </body>
