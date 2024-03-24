@@ -10,7 +10,6 @@
         body {
           background-image: url('pic.png');
           background-color:#000000;
-align-items: center;
 
     background-repeat: no-repeat; 
     background-size: cover;
@@ -76,6 +75,7 @@ p {
     justify-content: flex-end;
     align-items: center;
     height: 100%;
+    width:auto;
     margin-right: 10px;
 }
 .button {
@@ -221,78 +221,84 @@ a:hover {
   padding:10px 10px 10px 10px;
   border-radius: 5% 5% 5% 5%;
 }
-.container2 {
-  display: grid;
-  grid-template-columns: repeat(3,  1fr); /* Three columns */
-  grid-gap: 25px; /* Gap between grid items */
-  align-items: center;
-    margin :0;
-  box-shadow: 2px 2px 2px 4px rgb(0, 0, 0);
-  padding: 20px 20px 20px 20px;
-  border-radius: 5%;
-  width: 1000px; /* Adjusted width for three boxes */
-  height: auto; /* Allow height to adjust based on content */
-}
-.txt
-{
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.7);
-  position: absolute;
+
+
+  .container2 {
+    display: grid;
+    grid-template-columns: repeat(3,  1fr); /* Three columns */
+    grid-gap: 25px; /* Gap between grid items */
+    
+    box-shadow: 2px 2px 2px 4px rgb(0, 0, 0);
+    padding: 20px 20px 20px 20px;
+    border-radius: 5%;
+    width: 1360px; /* Adjusted width for three boxes */
+    height: auto; /* Allow height to adjust based on content */
+  }
+  .txt
+  {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    
+    bottom: 0%;
+    width: 1050px;
+    height: auto;
+    left:50%;
+    max-width: 100%;
+    transform: translate(-50%, -50%); 
+    padding-bottom: auto;
+    padding-top: auto;
+    display: grid;
+   opacity: 10;
+   align-items: center;
+   transition: opacity 0.3s ease;
+  }
   
-  bottom: 0%;
-  width: 1050px;
-  height: auto;
-  left:50%;
-  max-width: 100%;
-  transform: translate(-50%, -50%); 
-  padding-bottom: auto;
-  padding-top: auto;
-  display: grid;
- opacity: 10;
- align-items: center;
- transition: opacity 0.3s ease;
-}
-
-
-.sub {
-  flex: 1; /* Each box takes equal width */
-  box-shadow: 2px 2px 2px 4px rgb(0, 0, 0);
-  position: relative;
-  padding: 20px;
-  border-radius: 5%;
-  width: auto;
-  height: 510px;
-  margin-right: 10px; /* Adjust spacing between boxes */
-  background-size: cover; /* Make the background image cover the entire box */
-  background-position: center; /* Center the background image */
-  background-repeat: no-repeat; /* Prevent background image from repeating */
-  cursor: pointer;
-}
-.sub:hover .overlay {
-  opacity: 1; /* Show the overlay when hovering over sub box */
-}
-
-.sub:last-child {
-  margin-right: 0; /* Remove margin from the last box in each row */
-}
-.play-icon {
-  display: none; /* Initially hide the play icon */
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.6);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 380px;
-  height: 510px;
-  background-image: url('play.png'); /* Replace 'play_icon.png' with your play icon image */
-  background-size: cover;
-  background-size: contain; /* Ensure the play icon fits within its container */
-  background-repeat: no-repeat; /* Prevent the play icon from repeating */
-  background-position: center;
-}
-.sub:hover .play-icon {
-  display: block; /* Show the play icon when hovering over sub box */
-}
+  
+  .sub {
+    flex: 1; /* Each box takes equal width */
+    box-shadow: 2px 2px 2px 4px rgb(0, 0, 0);
+    position: relative;
+    padding: 20px;
+    border-radius: 5%;
+    width: auto;
+    height: 510px;
+    margin-right: 10px; /* Adjust spacing between boxes */
+    background-size: cover; /* Make the background image cover the entire box */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent background image from repeating */
+    cursor: pointer;
+  }
+  .sub:hover .overlay {
+    opacity: 1; /* Show the overlay when hovering over sub box */
+  }
+  
+  .sub:last-child {
+    margin-right: 0; /* Remove margin from the last box in each row */
+  }
+  .play-icon {
+    display: none; /* Initially hide the play icon */
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 480px;
+    height: 550px;
+    background-image: url('play.png'); /* Replace 'play_icon.png' with your play icon image */
+    background-size: cover;
+    background-size: contain; /* Ensure the play icon fits within its container */
+    background-repeat: no-repeat; /* Prevent the play icon from repeating */
+    background-position: center;
+  }
+  .sub:hover .play-icon {
+    display: block; /* Show the play icon when hovering over sub box */
+  }
+  
+  
+        
+  
+  
 
 
       
