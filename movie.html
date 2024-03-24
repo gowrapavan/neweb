@@ -2,8 +2,6 @@
 <html>
 <head>
     <title>Gowra</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
     <style>
       * {
@@ -11,29 +9,21 @@
     }
         body {
           background-image: url('pic.png');
-          background-color:#000000;
-        
-align-items: center;
-    background-repeat: no-repeat; 
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: absolute;    
-    font-family: Arial, sans-serif;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh
+      background-color: #000000;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: absolute;
+      font-family: Arial, sans-serif;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      align-items: center;
+      justify-content: center;
 
 }
-@media only screen and (max-width: 768px) {
-  /* Adjust styles for screens smaller than 768px */
-  .content {
-    margin: 50px auto 0; /* Adjust margin for smaller screens */
-    padding: 20px; /* Adjust padding for smaller screens */
-  }
-}
-
 .header {
   font-size: 2rem;
     position: fixed;
@@ -86,7 +76,6 @@ p {
     justify-content: flex-end;
     align-items: center;
     height: 100%;
-    width:auto;
     margin-right: 10px;
 }
 .button {
@@ -232,84 +221,77 @@ a:hover {
   padding:10px 10px 10px 10px;
   border-radius: 5% 5% 5% 5%;
 }
+.container2 {
+  display: grid;
+  grid-template-columns: repeat(4,  1fr); /* Three columns */
+  grid-gap: 25px; /* Gap between grid items */
+  
+  box-shadow: 2px 2px 2px 4px rgb(0, 0, 0);
+  padding: 20px 20px 20px 20px;
+  border-radius: 5%;
+  width: 1360px; /* Adjusted width for three boxes */
+  height: auto; /* Allow height to adjust based on content */
+}
+.txt
+{
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  
+  bottom: 0%;
+  width: 1050px;
+  height: auto;
+  left:50%;
+  max-width: 100%;
+  transform: translate(-50%, -50%); 
+  padding-bottom: auto;
+  padding-top: auto;
+  display: grid;
+ opacity: 10;
+ align-items: center;
+ transition: opacity 0.3s ease;
+}
 
 
-  .container2 {
-    display: grid;
-    grid-template-columns: repeat(3,  1fr); /* Three columns */
-    grid-gap: 25px; /* Gap between grid items */
-    
-    box-shadow: 2px 2px 2px 4px rgb(0, 0, 0);
-    padding: 20px 20px 20px 20px;
-    border-radius: 5%;
-    width: 1360px; /* Adjusted width for three boxes */
-    height: auto; /* Allow height to adjust based on content */
-  }
-  .txt
-  {
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.7);
-    position: absolute;
-    
-    bottom: 0%;
-    width: 1050px;
-    height: auto;
-    left:50%;
-    max-width: 100%;
-    transform: translate(-50%, -50%); 
-    padding-bottom: auto;
-    padding-top: auto;
-    display: grid;
-   opacity: 10;
-   align-items: center;
-   transition: opacity 0.3s ease;
-  }
-  
-  
-  .sub {
-    flex: 1; /* Each box takes equal width */
-    box-shadow: 2px 2px 2px 4px rgb(0, 0, 0);
-    position: relative;
-    padding: 20px;
-    border-radius: 5%;
-    width: auto;
-    height: 510px;
-    margin-right: 10px; /* Adjust spacing between boxes */
-    background-size: cover; /* Make the background image cover the entire box */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat; /* Prevent background image from repeating */
-    cursor: pointer;
-  }
-  .sub:hover .overlay {
-    opacity: 1; /* Show the overlay when hovering over sub box */
-  }
-  
-  .sub:last-child {
-    margin-right: 0; /* Remove margin from the last box in each row */
-  }
-  .play-icon {
-    display: none; /* Initially hide the play icon */
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.6);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 480px;
-    height: 550px;
-    background-image: url('play.png'); /* Replace 'play_icon.png' with your play icon image */
-    background-size: cover;
-    background-size: contain; /* Ensure the play icon fits within its container */
-    background-repeat: no-repeat; /* Prevent the play icon from repeating */
-    background-position: center;
-  }
-  .sub:hover .play-icon {
-    display: block; /* Show the play icon when hovering over sub box */
-  }
-  
-  
-        
-  
-  
+.sub {
+  flex: 1; /* Each box takes equal width */
+  box-shadow: 2px 2px 2px 4px rgb(0, 0, 0);
+  position: relative;
+  padding: 20px;
+  border-radius: 5%;
+  width: auto;
+  height: 510px;
+  margin-right: 10px; /* Adjust spacing between boxes */
+  background-size: cover; /* Make the background image cover the entire box */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent background image from repeating */
+  cursor: pointer;
+}
+.sub:hover .overlay {
+  opacity: 1; /* Show the overlay when hovering over sub box */
+}
+
+.sub:last-child {
+  margin-right: 0; /* Remove margin from the last box in each row */
+}
+.play-icon {
+  display: none; /* Initially hide the play icon */
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 380px;
+  height: 510px;
+  background-image: url('play.png'); /* Replace 'play_icon.png' with your play icon image */
+  background-size: cover;
+  background-size: contain; /* Ensure the play icon fits within its container */
+  background-repeat: no-repeat; /* Prevent the play icon from repeating */
+  background-position: center;
+}
+.sub:hover .play-icon {
+  display: block; /* Show the play icon when hovering over sub box */
+}
 
 
       
@@ -349,7 +331,7 @@ a:hover {
 
 
     <div class="content">
-        <h1>Hey,<br>Watch Your Yo Favorite Movies</h1>
+        <h1>Hey,<br>Watch Your Favorite Movies</h1>
         
          
          
@@ -473,5 +455,4 @@ a:hover {
     
 </body>
 </html>
-
 
