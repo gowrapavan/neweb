@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gowra</title>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
+    <style>
+      * {
+        box-sizing: border-box;
+    }
+        body {
+          background-image: url('pic.png');
+          background-color:#000000;
+
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: absolute;    
+    font-family: Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh
+
+}
+.header {
+  font-size: 2rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 15px;
+    background-color:transparent;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 50px 0 0 50px;
+     box-shadow: 2px 2px 2px 4px rgb(16, 8, 8);
+
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+.content {
+    max-width: 800px;
+    margin: 100px auto 0;
+    padding: 50px;
+    text-align: center;
+    color: #ffffff;
+   overflow: initial;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    width:1000px;
+}
+
+p {
+    font-size: 2rem;
+    margin-bottom: 100px;
+    margin-right: -100px;
+    margin-left: -100px;
+    text-align: left;
+}
+
+.button-group {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    margin-right: 10px;
+}
+.button {
+    margin-left: 5px;
+    color: #ffffff;
+    padding: 0.5rem 1rem ;
+    background-color: #000000;
+    border-radius: 10px 0px 10px 0px;
+    font-size: 1.3rem;
+    box-shadow: 0 2px 4px rgba(238, 231, 231, 0.87);
+    transition: background-color 0.3s ease;
+}
+.button:hover {
+    background-color: #ffffff;
+    color: #030303;
+}
+.container{
+  display: grid;
+  grid-template-columns: repeat(4,  1fr); /* Three columns */
+  grid-gap: 25px; /* Gap between grid items */
+    padding-bottom: 150px;
+    display: fixed;
+    justify-content: center;
+    border-radius: 50px 0 0 50px;
+    
+
+}
+
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+}
+
+
+
+
+.ybutton {
+  padding: 0.5rem 1rem  ;
+  
+  padding-top: 0.5rem;;
+  background-color: #666363;
+  border-radius: 10px 0px 10px 0px;
+  font-size: 1.3rem;
+  color: #ffffff;
+}
+.ybutton:hover {
+  background-color: #ffffff;
+  color: #030303;
+}
+
+main {
+  padding-top: 50px; /* Add top padding to the main content area to account for the height of the header */
+}
+.header .logo-container .site-title .first-letter {
+  font-family: 'Alex Brush', cursive;
+  font-size: 1.5em;
+}
+.first-letter {
+  font-family: 'Alex Brush', cursive;
+  font-size: 1.5em;
+}
+.rest-of-text {
+  font-family: 'Lucidity Expand', sans-serif;
+}
+.site-title {
+  font-size: 1.5rem;
+  margin-left: 10px;
+  text-transform: uppercase;
+  color: #fefcfc;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  height: 50px;
+  width: auto;
+}
+
+
+        
+
+.cimage{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border-radius: 50% 50% 50% 50% / 25% 25% 25% 25%;  color: #c70606;
+  font-size: 5rem;
+  background-color: none;
+  padding-bottom: 100px;
+  padding-top: 100px;
+  text-align: center;
+  max-width: 10%;
+  max-height: 0%;
+  shape-image-threshold: circle;
+
+}
+.fbutton{
+text-align: center;
+display: block;
+margin-left: auto;
+margin-right: auto;
+
+padding: 0.5rem 1rem  ;
+  
+  padding-top: 0.5rem;;
+  background-color: #666363;
+  border-radius: 10px 0px 10px 0px;
+  font-size: 1.3rem;
+  color: #ffffff;
+  text-decoration: dashed;
+}
+.fbutton:hover {
+  background-color: #ffffff;
+  color: #030303;
+  text-decoration: none;
+}
+a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+a:hover {
+  text-decoration: double;
+}
+.container0
+{
+  box-shadow: 2px 2px 2px 4px rgb(0, 0, 0);
+  padding:10px 10px 10px 10px;
+  border-radius: 5% 5% 5% 5%;
+}
+.container1
+{
+  box-shadow: 2px 2px 2px 4px rgb(0, 0, 0);
+  padding:10px 10px 10px 10px;
+  border-radius: 5% 5% 5% 5%;
+}
+.container2 {
+  display: grid;
+  grid-template-columns: repeat(4,  1fr); /* Three columns */
+  grid-gap: 25px; /* Gap between grid items */
+  
+  box-shadow: 2px 2px 2px 4px rgb(0, 0, 0);
+  padding: 20px 20px 20px 20px;
+  border-radius: 5%;
+  width: 1360px; /* Adjusted width for three boxes */
+  height: auto; /* Allow height to adjust based on content */
+}
+.txt
+{
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  
+  bottom: 0%;
+  width: 1050px;
+  height: auto;
+  left:50%;
+  max-width: 100%;
+  transform: translate(-50%, -50%); 
+  padding-bottom: auto;
+  padding-top: auto;
+  display: grid;
+ opacity: 10;
+ align-items: center;
+ transition: opacity 0.3s ease;
+}
+
+
+.sub {
+  flex: 1; /* Each box takes equal width */
+  box-shadow: 2px 2px 2px 4px rgb(0, 0, 0);
+  position: relative;
+  padding: 20px;
+  border-radius: 5%;
+  width: auto;
+  height: 510px;
+  margin-right: 10px; /* Adjust spacing between boxes */
+  background-size: cover; /* Make the background image cover the entire box */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent background image from repeating */
+  cursor: pointer;
+}
+.sub:hover .overlay {
+  opacity: 1; /* Show the overlay when hovering over sub box */
+}
+
+.sub:last-child {
+  margin-right: 0; /* Remove margin from the last box in each row */
+}
+.play-icon {
+  display: none; /* Initially hide the play icon */
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 380px;
+  height: 510px;
+  background-image: url('play.png'); /* Replace 'play_icon.png' with your play icon image */
+  background-size: cover;
+  background-size: contain; /* Ensure the play icon fits within its container */
+  background-repeat: no-repeat; /* Prevent the play icon from repeating */
+  background-position: center;
+}
+.sub:hover .play-icon {
+  display: block; /* Show the play icon when hovering over sub box */
+}
+
+
+      
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        
+
+
+      <div class="logo-container">
+        <img class="logo" src="rg.png" alt="logo">
+        <span class="site-title">
+          <span class="first-letter"> G</span>
+        <span class="rest-of-text">OWRA</span>
+        </span>
+      </div>
+ 
+
+
+      <div class="button-group"> 
+        <a href="index.html">  <button class="button">Home</button></a>
+          <a href="Login.html"> <button class="button">Login</button></a>
+        <button class="button">About Us</button>
+        </div>
+        
+    </div>
+
+    
+
+
+    <div class="content">
+        <h1>Hey,<br>Watch Your Favorite Movies</h1>
+        
+         
+         
+         
+         
+         
+          <div class="container2">
+            <div class="sub" onclick="window.location.href='Login.html';" style="background-image: url('rh.jpg');">
+              <div class="txt">
+                <h2>Road House (2024)</h2>
+              </div>
+              <div class="play-icon"></div>
+            </div><div class="sub" onclick="window.location.href='Login.html';" style="background-image: url('pt.jpg');">
+              <div class="txt">
+                <h2>Poor Things(2023)</h2>
+              </div>
+              <div class="play-icon"></div>
+            </div><div class="sub" onclick="window.location.href='Login.html';" style="background-image: url('spi.jpg');">
+              <div class="txt">
+                <h2>Spider-Man: Across the Spider-Verse (2022)</h2>
+              </div>
+              <div class="play-icon"></div>
+            </div><div class="sub" onclick="window.location.href='Login.html';" style="background-image: url('spin.jpg');">
+              <div class="txt">
+                <h2>Spider-Man: into the Spider-Verse (2018)</h2>
+              </div>
+              <div class="play-icon"></div>
+            </div><div class="sub" onclick="window.location.href='Login.html';" style="background-image: url('rh.jpg');">
+              <div class="txt">
+                <h2>Road House (2024)</h2>
+              </div>
+              <div class="play-icon"></div>
+            </div><div class="sub" onclick="window.location.href='Login.html';" style="background-image: url('rh.jpg');">
+              <div class="txt">
+                <h2>Road demo (2024)</h2>
+              </div>
+              <div class="play-icon"></div>
+            </div><div class="sub" onclick="window.location.href='Login.html';" style="background-image: url('rh.jpg');">
+              <div class="txt">
+                <h2>Road House (2024)</h2>
+              </div>
+              <div class="play-icon"></div>
+            </div><div class="sub" onclick="window.location.href='Login.html';" style="background-image: url('rh.jpg');">
+              <div class="txt">
+                <h2>Road House (2024)</h2>
+              </div>
+              <div class="play-icon"></div>
+            </div><div class="sub" onclick="window.location.href='Login.html';" style="background-image: url('rh.jpg');">
+              <div class="txt">
+                <h2>Road House (2024)</h2>
+              </div>
+              <div class="play-icon"></div>
+            </div><div class="sub" onclick="window.location.href='Login.html';" style="background-image: url('rh.jpg');">
+              <div class="txt">
+                <h2>Road House (2024)</h2>
+              </div>
+              <div class="play-icon"></div>
+            </div><div class="sub" onclick="window.location.href='Login.html';" style="background-image: url('rh.jpg');">
+              <div class="txt">
+                <h2>Road House (2024)</h2>
+              </div>
+              <div class="play-icon"></div>
+            </div><div class="sub" onclick="window.location.href='Login.html';" style="background-image: url('rh.jpg');">
+              <div class="txt">
+                <h2>Road House (2024)</h2>
+              </div>
+              <div class="play-icon"></div>
+            </div>
+          </div>
+
+
+
+          <div>
+            <br><br>
+          </div><div>
+            <br><br>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container">
+          <div class="container1">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/sWoMNeHRcnk?si=exXdWgmEhn-4T5GP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="ybutton-group"> <br>
+              <a href="index.html"> <button class="ybutton">HTML</button></a>
+            </div>
+        </div>
+      
+        <div class="container1">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/_uQrJ0TkZlc?si=E0FsvccwzB6NiTWM?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; caption-on; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>           
+           <div class="ybutton-group"> 
+            <a href="index.html"> <br><button class="ybutton">Python</button></a>
+      </div>  
+     </div>  
+     </div>         
+            
+            
+           
+        
+         <div class="container0">
+              <iframe src="https://www.2embed.cc/embed/tt3359350?autoplay=1&mute=0" width="1060px" height="515px" autoplay  scrolling="no" allow="autoplay" allowfullscreen></iframe>     
+                 </div>
+
+                 <
+          
+    </div>
+    
+
+
+   
+
+
+    
+</body>
+</html>
+
+
