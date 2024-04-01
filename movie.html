@@ -2,10 +2,13 @@
 <html>
 <head>
     <title>Gowra</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
     <style>
       * {
         box-sizing: border-box;
+        scrollbar-width: none;
     }
     body {
       background-image: url('pic.png');
@@ -25,14 +28,14 @@
   }
 .header {
   font-size: 2rem;
-    position: fixed;
+    position: relative;
     top: 0;
     right: 0;
-    padding: 15px;
+    padding: 5px;
     background-color:transparent;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(32, 54, 83, 0.9);
     border-radius: 50px 0 0 50px;
-     box-shadow: 2px 2px 2px 4px rgb(16, 8, 8);
+     box-shadow: 2px 2px 20px 4px rgb(90, 75, 75);
 
     z-index: 100;
     width: 100%;
@@ -41,23 +44,34 @@
 
 
 }
+@media only screen and (max-width: 600px) {
+  .header {
+    flex-direction: column; /* Stack items vertically on small screens */
+  }
+}
 
 .content {
   max-width: 800px;
   margin:  auto; /* Adjust the top margin as needed */
   padding: 50px;
   text-align: center;
-  color: #ffffff;
+  color: #adbfca;
+  
   overflow: initial;
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: right;
+  align-items: left;
+  place-items: center;
   
 }
-
+@media only screen and (max-width: 600px) {
+  .content {
+    flex-direction: column; /* Stack items vertically on small screens */
+  }
+}
 h1 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     margin-bottom: 20px;
     width:1000px;
 }
@@ -83,7 +97,7 @@ p {
     padding: 0.5rem 1rem ;
     background-color: #000000;
     border-radius: 10px 0px 10px 0px;
-    font-size: 1.3rem;
+    font-size: 1rem;
     box-shadow: 0 2px 4px rgba(238, 231, 231, 0.87);
     transition: background-color 0.3s ease;
 }
@@ -161,44 +175,7 @@ main {
 }
 
 
-        
-
-.cimage{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  border-radius: 50% 50% 50% 50% / 25% 25% 25% 25%;  color: #c70606;
-  font-size: 5rem;
-  background-color: none;
-  padding-bottom: 100px;
-  padding-top: 100px;
-  text-align: center;
-  max-width: 10%;
-  max-height: 0%;
-  shape-image-threshold: circle;
-
-}
-.fbutton{
-text-align: center;
-display: block;
-margin-left: auto;
-margin-right: auto;
-
-padding: 0.5rem 1rem  ;
-  
-  padding-top: 0.5rem;;
-  background-color: #666363;
-  border-radius: 10px 0px 10px 0px;
-  font-size: 1.3rem;
-  color: #ffffff;
-  text-decoration: dashed;
-}
-.fbutton:hover {
-  background-color: #ffffff;
-  color: #030303;
-  text-decoration: none;
-}
+ 
 a {
   color: rgb(0, 0, 0);
   text-decoration: none;
@@ -208,35 +185,42 @@ a {
 a:hover {
   text-decoration: double;
 }
-.container0
-{
-  box-shadow: 2px 2px 2px 4px rgb(0, 0, 0);
-  padding:10px 10px 10px 10px;
-  border-radius: 5% 5% 5% 5%;
-}
-.container1
-{
-  box-shadow: 2px 2px 2px 4px rgb(0, 0, 0);
-  padding:10px 10px 10px 10px;
-  border-radius: 5% 5% 5% 5%;
-}
+
 .container2 {
   display: grid;
-  grid-template-columns: repeat(1,  1fr); /* Three columns */
-  grid-gap: 25px; /* Gap between grid items */
-  
+  grid-gap: 20px;
   box-shadow: 2px 2px 2px 4px rgb(0, 0, 0);
-  padding: 20px 20px 20px 20px;
+  padding: 20px;
   border-radius: 5%;
-  width: 960px; /* Adjusted width for three boxes */
-  height: auto; /* Allow height to adjust based on content */
+ 
+  max-width: 100%;
+  background-color: #000000;
+  align-items: center;
+  justify-items: center; /* Center grid items horizontally */
+  overflow-x: auto; /* Add horizontal scrollbar if content overflows */
+  overflow-y: auto; /* Add vertical scrollbar if content overflows */
 }
+
+.sub {
+  flex: 1; /* Each box takes equal width */
+  box-shadow: 0.5px 0.5px 0.5px 0.5px rgb(0, 0, 0);
+  position: relative;
+  padding: 20px;
+  border-radius: 2%;
+  width: 100%; /* Ensure grid items take full width */
+  height: 215px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
 .txt
 {
   text-align: center;
-  background-color: rgba(18, 17, 17, 0.7);
+  background-color: rgba(18, 17, 17, 0.6);
   position: absolute;
-  
+  font-size: 0.5rem;
   bottom: 0%;
   width: 1050px;
   height: auto;
@@ -252,20 +236,9 @@ a:hover {
 }
 
 
-.sub {
-  flex: 1; /* Each box takes equal width */
-  box-shadow: 2px 2px 2px 4px rgb(0, 0, 0);
-  position: relative;
-  padding: 20px;
-  border-radius: 5%;
-  width: auto;
-  height: 515px;
-  margin-right: 10px; /* Adjust spacing between boxes */
-  background-size: cover; /* Make the background image cover the entire box */
-  background-position: center; /* Center the background image */
-  background-repeat: no-repeat; /* Prevent background image from repeating */
-  cursor: pointer;
-}
+
+
+
 .sub:hover .overlay {
   opacity: 1; /* Show the overlay when hovering over sub box */
 }
@@ -277,21 +250,31 @@ a:hover {
   display: none; /* Initially hide the play icon */
   position: absolute;
   background-color: rgba(0, 0, 0, 0.4);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 1050px;
-  height: 515px;
+  top: 0; /* Position relative to the parent */
+  left: 0; /* Position relative to the parent */
+  width: 100%; /* Match the width of the parent */
+  height: 100%; /* Match the height of the parent */
   background-image: url('play.png'); /* Replace 'play_icon.png' with your play icon image */
-  background-size: cover;
   background-size: contain; /* Ensure the play icon fits within its container */
   background-repeat: no-repeat; /* Prevent the play icon from repeating */
-  background-position: center;
+  background-position: center; /* Center the play icon */
 }
 .sub:hover .play-icon {
   display: block; /* Show the play icon when hovering over sub box */
 }
+.buffering {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(0, 0, 0, 0.7); /* Adjust border color and width as needed */
+  border-radius: 50%;
+  animation: spin 1s linear infinite; /* Apply the animation */
+}
 
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 
       
 
@@ -309,6 +292,7 @@ a:hover {
 
 
       <div class="logo-container">
+      
         <img class="logo" src="rg.png" alt="logo">
         <span class="site-title">
           <span class="first-letter"> G</span>
@@ -321,7 +305,8 @@ a:hover {
       <div class="button-group"> 
         <a href="index.html">  <button class="button">Home</button></a>
           <a href="Login.html"> <button class="button">Login</button></a>
-        <button class="button">About Us</button>
+        <a href="Login.html"> <button class="button">About us</button></a>
+
         </div>
         
     </div>
@@ -338,62 +323,69 @@ a:hover {
          
          
           <div class="container2">
-            <div class="sub" onclick="window.location.href='Login.html';" style="background-image: url('rh1.jpg');">
+            <div class="sub" onclick="window.location.href='Login.html';" style="background-image: url('mv.png');">
               <div class="txt">
                 <h2>Road House (2024)</h2>
               </div>
               <div class="play-icon"></div>
-            </div><div class="sub" onclick="window.location.href='Login.html';" style="background-image: url('pt1.jpg');">
+            </div>
+            <div class="sub" onclick="window.location.href='Login.html';" style="background-image: url('pt.jpg');">
               <div class="txt">
                 <h2>Poor Things(2023)</h2>
               </div>
               <div class="play-icon"></div>
-            </div><div class="sub" onclick="window.location.href='Login.html';" style="background-image: url('sa.jpg');">
+            </div>
+            <div class="sub" onclick="window.location.href='Login.html';" style="background-image: url('sa.jpg');">
               <div class="txt">
                 <h2>Spider-Man: Across the Spider-Verse (2022)</h2>
               </div>
               <div class="play-icon"></div>
-            </div><div class="sub" onclick="window.location.href='Login.html';" style="background-image: url('si.jpg');">
+            </div>
+            <div class="sub" onclick="window.location.href='Login.html';" style="background-image: url('si.jpg');">
               <div class="txt">
                 <h2>Spider-Man: into the Spider-Verse (2018)</h2>
               </div>
               <div class="play-icon"></div>
-            </div><div class="sub" onclick="window.location.href='Login.html';" style="background-image: url('rh1.jpg');">
+            </div>
+            <div class="sub" onclick="window.location.href='Login.html';" style="background-image: url('mv.png');">
               <div class="txt">
                 <h2>Road House (2024)</h2>
               </div>
               <div class="play-icon"></div>
-            </div><div class="sub" onclick="window.location.href='Login.html';" style="background-image: url('rh1.jpg');">
+            </div>
+            <div class="sub" onclick="window.location.href='Login.html';" style="background-image: url('mv.png');">
               <div class="txt">
                 <h2>Road demo (2024)</h2>
               </div>
               <div class="play-icon"></div>
-            </div><div class="sub" onclick="window.location.href='Login.html';" style="background-image: url('rh1.jpg');">
+            </div>
+            <div class="sub" onclick="window.location.href='Login.html';" style="background-image: url('mv.png');">
               <div class="txt">
                 <h2>Road House (2024)</h2>
               </div>
               <div class="play-icon"></div>
-            </div><div class="sub" onclick="window.location.href='Login.html';" style="background-image: url('rh1.jpg');">
+            </div>
+            <div class="sub" onclick="window.location.href='Login.html';" style="background-image: url('mv.png');">
               <div class="txt">
                 <h2>Road House (2024)</h2>
               </div>
               <div class="play-icon"></div>
-            </div><div class="sub" onclick="window.location.href='Login.html';" style="background-image: url('rh1.jpg');">
+            </div><div class="sub" onclick="window.location.href='Login.html';" style="background-image: url('mv.png');">
               <div class="txt">
                 <h2>Road House (2024)</h2>
               </div>
               <div class="play-icon"></div>
-            </div><div class="sub" onclick="window.location.href='Login.html';" style="background-image: url('rh1.jpg');">
+            </div><div class="sub" onclick="window.location.href='Login.html';" style="background-image: url('mv.png');">
               <div class="txt">
                 <h2>Road House (2024)</h2>
               </div>
               <div class="play-icon"></div>
-            </div><div class="sub" onclick="window.location.href='Login.html';" style="background-image: url('rh1.jpg');">
+            </div><div class="sub" onclick="window.location.href='Login.html';" style="background-image: url('mv.png');">
               <div class="txt">
                 <h2>Road House (2024)</h2>
               </div>
               <div class="play-icon"></div>
-            </div><div class="sub" onclick="window.location.href='Login.html';" style="background-image: url('rh1.jpg');">
+            </div><div class="sub" onclick="window.location.href='Login.html';" style="background-image: url('mv.png');">
               <div class="txt">
                 <h2>Road House (2024)</h2>
               </div>
@@ -408,49 +400,189 @@ a:hover {
           </div><div>
             <br><br>
           </div>
-
-
-
-
-
-
-
-
-
-
-
-    <div class="container">
-          <div class="container1">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/sWoMNeHRcnk?si=exXdWgmEhn-4T5GP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <div class="ybutton-group"> <br>
-              <a href="index.html"> <button class="ybutton">HTML</button></a>
-            </div>
         </div>
-      
-        <div class="container1">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/_uQrJ0TkZlc?si=E0FsvccwzB6NiTWM?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; caption-on; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>           
-           <div class="ybutton-group"> 
-            <a href="index.html"> <br><button class="ybutton">Python</button></a>
-      </div>  
-     </div>  
-     </div>         
-            
-            
-           
-        
-         <div class="container0">
-              <iframe src="https://www.2embed.cc/embed/tt3359350?autoplay=1&mute=0" width="1060px" height="515px" autoplay  scrolling="no" allow="autoplay" allowfullscreen></iframe>     
-                 </div>
-
-                 </div>
           
    
     
+        <style>
+          /* Example styling for a footer */
+          .footer {
+              background-color:#1d314a;
+              color: #fff;
+              padding: 20px;
+              text-align: center;
+              width: 100%;
+          }
+  
+          .footer-content {
+              max-width: 1200px;
+              margin: 0 auto;
+               align-items:center ;
+               text-align: center;
+          }
+  
+          .footer p {
+              margin: 0 auto;
+              text-align: center;
+              place-content: center;
+
+          }
+  
+          .footer-links {
+              list-style-type: none;
+              padding: 0;
+          }
+  
+          .footer-links li {
+              display: inline;
+              margin-right: 10px;
+          }
+  
+          .footer-links li:last-child {
+              margin-right: 0;
+          }
+  
+          .footer-links li a {
+              color: #fff;
+              text-decoration: none;
+          }
+      </style>
+  
+      <!-- Your HTML content here -->
+      <footer class="footer">
+          <div class="footer-content">
+              <p>© 2024 GOWRA</p>
+              <ul class="footer-links">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">Contact Us</a></li>
+              </ul>
+          </div>
+      </footer>
 
 
    
+      <script>
+        function adjustGrid() {
+            var container = document.querySelector('.container2');
+            var sub = document.querySelector('.sub');
+            var hd = document.querySelector('.header');
+            var screenWidth = window.innerWidth;
+    
+            // Adjust grid columns based on screen width
+            if (screenWidth <= 700) {
+                container.style.gridTemplateColumns = 'repeat(2, 1fr)';
+                container.style.maxWidth = '300px'; // Adjust container width as needed
+                sub.style.height = '220px';
+                sub.style.width = '120px';
+                hd.style.maxWidth = '1000px'; // Adjust header width if necessary
+    
+            } 
+            else if (screenWidth > 700 && screenWidth <= 900) { // Adjusted screen width range
+              container.style.gridTemplateColumns = 'repeat(3, 1fr)';
+              container.style.maxWidth = '1800px'; // Adjust container width as needed
+  
+              // Loop through each sub element and adjust styles
+              var subs = container.querySelectorAll('.sub');
+              subs.forEach(function(sub) {
+                  sub.style.height = '260px';
+                  sub.style.width = '200px';
+              });
+  
+              hd.style.maxWidth = '1200px'; // Adjust header width if necessary
+  
+              // Adjust overflow property of the container
+              container.style.overfloX = 'auto'; // Change overflow to auto
+              container.style.overflowY = 'auto'; // Change overflow to auto
 
+  
+          } 
+          else if (screenWidth > 900 && screenWidth <= 1200) { // Adjusted screen width range
+                container.style.gridTemplateColumns = 'repeat(4, 1fr)';
+                container.style.maxWidth = '1800px'; // Adjust container width as needed
+    
+                // Loop through each sub element and adjust styles
+                var subs = container.querySelectorAll('.sub');
+                subs.forEach(function(sub) {
+                    sub.style.height = '260px';
+                    sub.style.width = '200px';
+                });
+    
+                hd.style.maxWidth = '1200px'; // Adjust header width if necessary
+    
+                // Adjust overflow property of the container
+                container.style.overfloX = 'auto'; // Change overflow to auto
+                container.style.overflowY = 'auto'; // Change overflow to auto
 
+    
+            } 
+
+            else if(screenWidth > 1200 && screenWidth <= 1300){
+              container.style.gridTemplateColumns = 'repeat(5, 1fr)';
+              container.style.maxWidth = '2200px'; // Adjust container width as needed
+  
+              // Loop through each sub element and adjust styles
+              var subs = container.querySelectorAll('.sub');
+              subs.forEach(function(sub) {
+                  sub.style.height = '320px';
+                  sub.style.width = '200px';
+              });
+  
+              hd.style.maxWidth = '2800px'; // Adjust header width if necessary
+          }
+          else if(screenWidth > 1300 && screenWidth <= 1600){
+            container.style.gridTemplateColumns = 'repeat(6, 1fr)';
+            container.style.maxWidth = '2200px'; // Adjust container width as needed
+
+            // Loop through each sub element and adjust styles
+            var subs = container.querySelectorAll('.sub');
+            subs.forEach(function(sub) {
+                sub.style.height = '320px';
+                sub.style.width = '200px';
+            });
+
+            hd.style.maxWidth = '2800px'; // Adjust header width if necessary
+        }
+        else if(screenWidth > 1600 && screenWidth <= 1900){
+          container.style.gridTemplateColumns = 'repeat(7, 1fr)';
+          container.style.maxWidth = '2200px'; // Adjust container width as needed
+
+          // Loop through each sub element and adjust styles
+          var subs = container.querySelectorAll('.sub');
+          subs.forEach(function(sub) {
+              sub.style.height = '320px';
+              sub.style.width = '200px';
+          });
+
+          hd.style.maxWidth = '2800px'; // Adjust header width if necessary
+      }
+     
+
+       
+
+            else {
+                container.style.gridTemplateColumns = 'repeat(8, 1fr)';
+                container.style.maxWidth = '2200px'; // Adjust container width as needed
+    
+                // Loop through each sub element and adjust styles
+                var subs = container.querySelectorAll('.sub');
+                subs.forEach(function(sub) {
+                    sub.style.height = '320px';
+                    sub.style.width = '200px';
+                });
+    
+                hd.style.maxWidth = '2800px'; // Adjust header width if necessary
+            }
+        }
+    
+        // Call the function initially
+        adjustGrid();
+    
+        // Add event listener to adjust grid on window resize
+        window.addEventListener('resize', adjustGrid);
+    </script>
+    
     
 </body>
 </html>
