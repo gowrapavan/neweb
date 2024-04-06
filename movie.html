@@ -19,6 +19,7 @@
       background-position: absolute;
       font-family: Arial, sans-serif;
       padding: 0;
+      overflow-x: hidden;
       margin: 0;
       display: flex;
       flex-direction: column;
@@ -29,6 +30,7 @@
 .header {
   font-size: 2rem;
     position: relative;
+    min-width: 0;
     top: 0;
     right: 0;
     padding: 5px;
@@ -36,7 +38,7 @@
     background-color: rgba(32, 54, 83, 0.9);
     border-radius: 50px 0 0 50px;
      box-shadow: 2px 2px 20px 4px rgb(90, 75, 75);
-
+     width: 100%; /* Ensuring the header spans the full width of the screen */
     z-index: 100;
     width: 100%;
     display: flex;
@@ -53,10 +55,11 @@
 .content {
   max-width: 800px;
   margin:  auto; /* Adjust the top margin as needed */
+  max-width: 100%;
   padding: 50px;
   text-align: center;
   color: #adbfca;
-  
+  width: 90%; /* Adjusted width for responsive design */
   overflow: initial;
   flex: 1;
   display: flex;
@@ -192,7 +195,7 @@ a:hover {
   box-shadow: 2px 2px 2px 4px rgb(0, 0, 0);
   padding: 20px;
   border-radius: 5%;
- 
+  max-width: 100%; /* Adjusted maximum width for responsiveness */
   max-width: 100%;
   background-color: #000000;
   align-items: center;
@@ -207,6 +210,8 @@ a:hover {
   position: relative;
   padding: 20px;
   border-radius: 2%;
+  max-width: 100%;
+  box-sizing: border-box;
   width: 100%; /* Ensure grid items take full width */
   height: 215px;
   background-size: cover;
@@ -473,10 +478,17 @@ a:hover {
             // Adjust grid columns based on screen width
             if (screenWidth <= 700) {
                 container.style.gridTemplateColumns = 'repeat(2, 1fr)';
-                container.style.maxWidth = '300px'; // Adjust container width as needed
+                container.style.maxWidth = '1300px'; // Adjust container width as needed
+                 // Loop through each sub element and adjust styles
+              var subs = container.querySelectorAll('.sub');
+              subs.forEach(function(sub) {
                 sub.style.height = '220px';
-                sub.style.width = '120px';
-                hd.style.maxWidth = '1000px'; // Adjust header width if necessary
+                sub.style.width = '160px';
+              });
+                hd.style.maxWidth = '1200px'; // Adjust header width if necessary
+                 // Adjust overflow property of the container
+              container.style.overfloX = 'auto'; // Change overflow to auto
+              container.style.overflowY = 'auto'; // Change overflow to auto
     
             } 
             else if (screenWidth > 700 && screenWidth <= 900) { // Adjusted screen width range
