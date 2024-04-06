@@ -11,7 +11,6 @@
         scrollbar-width: none;
     }
     body {
-      background-image: url('pic.png');
       background-color: #000000;
       background-repeat: no-repeat;
       background-size: cover;
@@ -43,7 +42,6 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-
 
 }
 @media only screen and (max-width: 600px) {
@@ -95,7 +93,7 @@ p {
     margin-right: 10px;
 }
 .button {
-    margin-left: 5px;
+    margin-left: 10px;
     color: #ffffff;
     padding: 0.5rem 1rem ;
     background-color: #000000;
@@ -121,15 +119,6 @@ p {
 }
 
 
-.video-container iframe,
-.video-container object,
-.video-container embed {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100px;
-  height: 100px;
-}
 
 
 
@@ -153,7 +142,7 @@ main {
 }
 .header .logo-container .site-title .first-letter {
   font-family: 'Alex Brush', cursive;
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 .first-letter {
   font-family: 'Alex Brush', cursive;
@@ -469,6 +458,48 @@ a:hover {
 
    
       <script>
+// Function to adjust button font size based on screen width
+function adjustButtonFontSize() {
+  var buttons = document.querySelectorAll('.button');
+  var hd = document.querySelector('.header');
+  var siteTitle = document.querySelector('.site-title');
+  var h1Element = document.querySelector('h1');
+  var logo =document.querySelector('.logo-container');
+  var screenWidth = window.innerWidth;
+
+  // Check if screen width is less than 700px
+  if (screenWidth < 500) {
+    hd.style.justifyContent = 'center'; 
+      buttons.forEach(function(button) {
+          button.style.fontSize = '0.5rem'; // Adjust font size as needed
+      });
+      siteTitle.style.fontSize = '0.5rem'; // Adjust font size as needed
+      h1Element.style.fontSize = '1rem'; // Adjust font size as needed
+      logo.style.fontSize = '0.7rem'; // Adjust font size as needed
+      hd.style.maxheight = '10px'; // Adjust header width if necessary
+
+  } 
+  
+  else {
+      buttons.forEach(function(button) {
+          button.style.fontSize = ''; // Reset font size if screen width is greater than or equal to 700px
+      });
+      hd.style.justifyContent = 'space-between'; // or any other value you prefer
+      h1Element.style.fontSize = ''; // Adjust font size as needed
+      logo.style.fontSize = ' '; // Adjust font size as needed
+      siteTitle.style.fontSize = ' '; // Adjust font size as needed
+
+
+  }
+}
+
+// Call the function initially
+adjustButtonFontSize();
+
+// Add event listener to adjust button font size on window resize
+window.addEventListener('resize', adjustButtonFontSize);
+
+
         function adjustGrid() {
             var container = document.querySelector('.container2');
             var sub = document.querySelector('.sub');
@@ -598,4 +629,3 @@ a:hover {
     
 </body>
 </html>
-
