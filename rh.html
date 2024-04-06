@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gowra</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
+    <style>
+      * {
+        box-sizing: border-box;
+        scrollbar-width: none;
+    }
+    body {
+      background-image: url('pic.png');
+      background-color: #000000;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: absolute;
+      font-family: Arial, sans-serif;
+      padding: 0;
+      overflow-x: hidden;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      align-items: center;
+      justify-content: center;
+  }
+.header {
+  font-size: 2rem;
+    position: relative;
+    min-width: 0;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    background-color:transparent;
+    background-color: rgba(32, 54, 83, 0.9);
+     box-shadow: 2px 2px 20px 4px rgb(90, 75, 75);
+     width: 100%; /* Ensuring the header spans the full width of the screen */
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+@media only screen and (max-width: 600px) {
+  .header {
+    flex-direction: column; /* Stack items vertically on small screens */
+  }
+}
+
+.content {
+  max-width: 800px;
+  margin:  auto; /* Adjust the top margin as needed */
+  max-width: 100%;
+  padding: 50px;
+  text-align: center;
+  color: #adbfca;
+  width: 90%; /* Adjusted width for responsive design */
+  overflow: initial;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  place-items: center;
+  
+}
+@media only screen and (max-width: 600px) {
+  .content {
+    flex-direction: column; /* Stack items vertically on small screens */
+  }
+}
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    width:1000px;
+}
+
+p {
+    font-size: 2rem;
+    margin-bottom: 100px;
+    margin-right: -100px;
+    margin-left: -100px;
+    text-align: left;
+}
+
+.button-group {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    margin-right: 10px;
+}
+.button {
+    margin-left: 10px;
+    color: #ffffff;
+    padding: 0.5rem 1rem ;
+    background-color: #000000;
+    border-radius: 10px 0px 10px 0px;
+    font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(238, 231, 231, 0.87);
+    transition: background-color 0.3s ease;
+}
+.button:hover {
+    background-color: #ffffff;
+    color: #030303;
+}
+
+
+
+
+
+
+
+
+.header .logo-container .site-title .first-letter {
+  font-family: 'Alex Brush', cursive;
+  font-size: 1.5rem;
+}
+.first-letter {
+  font-family: 'Alex Brush', cursive;
+  font-size: 1.5em;
+}
+.rest-of-text {
+  font-family: 'Lucidity Expand', sans-serif;
+}
+.site-title {
+  font-size: 1.5rem;
+  margin-left: 10px;
+  text-transform: uppercase;
+  color: #fefcfc;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  height: 50px;
+  width: auto;
+}
+
+
+ 
+
+
+
+
+
+.container1
+{
+  box-shadow: 2px 2px 2px 4px rgb(0, 0, 0);
+  padding:10px 10px 10px 10px;
+  justify-content: right;
+  display: flex;
+  align-items: left;
+  background-color:#4b4949;
+  width: 1280px;
+  height: 616px;
+  margin-bottom: 75px;
+position: relative;
+  text-overflow: ellipsis; /* Show ellipsis (...) for text that overflows */
+              white-space: nowrap; /* Prevent text from wrapping */
+            text-overflow: ellipsis;
+            justify-content: center; /* Horizontally center the content */
+            align-items: center; /* Vertically center the content */
+}
+iframe {
+  width: 100%;
+  height: 100%;
+}
+img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Allow clicks to pass through the image to the iframe */
+}
+
+h1
+{
+  text-align: center;
+  align-items: center;
+  color: #ffffff;
+  margin-top: 20px;
+
+}
+.p{
+  text-align: left;
+  padding-left: 25%;
+  color: #ffffff; /* Text color for paragraph */
+  white-space: normal; /* Allow text to wrap within the container */
+  overflow: hidden; /* Prevent overflow */
+  text-overflow: ellipsis; /* Show ellipsis (...) for text that overflows */
+
+}
+.sub-c
+{
+  background-color: #3d3d3d;
+  height: 515px;
+  width: 414px;
+margin-right: auto;
+margin-left: 20px;
+background-image: url('rh1.jpg');
+background-size: cover;
+position: relative;
+}
+.sub-cc
+{
+    background-color: #4b4949;
+    height: 100%;
+    max-width : 70%;
+    margin-right: auto;
+    margin-left: 20px;
+    background-size: cover;
+    position: relative;
+    overflow: hidden; /* Add this line to prevent overflow */
+    padding: 20px;
+    border-radius: 5px;
+    overflow: hidden; /* Hide overflow content */
+
+  
+  
+}
+#videoFrame{
+background-image: url('sa.jpg');
+background-size: cover;
+width: 100%;
+height : 100%;
+}
+.sub-cc h1{
+  text-align: center;
+  margin-right: auto;
+  padding-top: 20px;
+  padding-right: 25%; 
+}
+.sub-cc p{
+  color: #928f8f;
+  font-size: 26px;
+  line-height: 1.5;
+  margin: 0; /* Reset margin */
+  padding: 0; /* Reset padding */
+}
+.sub-cc p1{
+  color: #ffffff;
+  font-size: x-large;
+  font-family: 'Roboto', sans-serif; /* Use Roboto font */
+
+}
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        
+
+
+      <div class="logo-container">
+        <img class="logo" src="rg.png" alt="logo">
+        <span class="site-title">
+          <span class="first-letter"> G</span>
+        <span class="rest-of-text">OWRA</span>
+        </span>
+      </div>
+ 
+
+
+      <div class="button-group"> 
+        <a href="index.html">  <button class="button">Home</button></a>
+          <a href="Login.html"> <button class="button">Login</button></a>
+        <button class="button">About Us</button>
+        </div>
+        
+    </div>
+
+    <div class="empty">
+      
+    </div>
+
+    <h1>Road House</h1>
+
+            
+           
+        </div>
+         <div class="container1">
+
+              <iframe id="videoFrame" src="https://www.2embed.cc/embed/tt3359350?autoplay=1&mute=0" width="1260px" height="616px" autoplay  scrolling="no" allow="autoplay" allowfullscreen></iframe>
+            
+          
+                 </div>
+ <div class="container1"  >        
+  <div class="sub-c"></div>
+  <div class="sub-cc">
+    <h1>Road House</h1>
+    <p>
+      Ex-UFC fighter Dalton takes a job as a bouncer at a Florida Keys<br> roadhouse, only to discover that this paradise is not all it seems.
+    </p>
+    <br>
+    <p1>IMDb Rating: ⭐️⭐️⭐️⭐️⭐️8.5/10</p1><br><br>
+    <p1>Actors: Jake Gyllenhaal,Daniela Melchior,Conor McGregor <br>(film debut),Billy Magnussen,Jessica Williams</p1>
+
+  </div>
+
+</div> 
+          
+          
+  
+    
+        <style>
+          /* Example styling for a footer */
+          .footer {
+              background-color:#1d314a;
+              color: #fff;
+              padding: 20px;
+              text-align: center;
+              width: 100%;
+              margin-top: auto;
+          }
+  
+          .footer-content {
+              max-width: 1200px;
+              margin: 0 auto;
+               align-items:center ;
+               text-align: center;
+          }
+  
+          .footer p {
+              margin: 0 auto;
+              text-align: center;
+              place-content: center;
+
+          }
+  
+          .footer-links {
+              list-style-type: none;
+              padding: 0;
+          }
+  
+          .footer-links li {
+              display: inline;
+              margin-right: 10px;
+          }
+  
+          .footer-links li:last-child {
+              margin-right: 0;
+          }
+  
+          .footer-links li a {
+              color: #fff;
+              text-decoration: none;
+          }
+      </style>
+  
+      <!-- Your HTML content here -->
+      <footer class="footer">
+          <div class="footer-content">
+              <p>© 2024 GOWRA</p>
+              <ul class="footer-links">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">Contact Us</a></li>
+              </ul>
+          </div>
+      </footer>
+
+
+   
+      <script>
+// Function to adjust button font size based on screen width
+function adjustButtonFontSize() {
+  var buttons = document.querySelectorAll('.button');
+  var hd = document.querySelector('.header');
+  var siteTitle = document.querySelector('.site-title');
+  var h1Element = document.querySelector('h1');
+  var logo =document.querySelector('.logo-container');
+  var screenWidth = window.innerWidth;
+
+  // Check if screen width is less than 700px
+  if (screenWidth < 500) {
+    hd.style.justifyContent = 'center'; 
+      buttons.forEach(function(button) {
+          button.style.fontSize = '0.5rem'; // Adjust font size as needed
+      });
+      siteTitle.style.fontSize = '0.5rem'; // Adjust font size as needed
+      h1Element.style.fontSize = '1rem'; // Adjust font size as needed
+      logo.style.fontSize = '0.7rem'; // Adjust font size as needed
+      hd.style.maxheight = '10px'; // Adjust header width if necessary
+
+  } 
+  
+  else {
+      buttons.forEach(function(button) {
+          button.style.fontSize = ''; // Reset font size if screen width is greater than or equal to 700px
+      });
+      hd.style.justifyContent = 'space-between'; // or any other value you prefer
+      h1Element.style.fontSize = ''; // Adjust font size as needed
+      logo.style.fontSize = ' '; // Adjust font size as needed
+      siteTitle.style.fontSize = ' '; // Adjust font size as needed
+
+
+  }
+}
+
+// Call the function initially
+adjustButtonFontSize();
+
+// Add event listener to adjust button font size on window resize
+window.addEventListener('resize', adjustButtonFontSize);
+
+
+
+
+    </script>
+    
+    
+</body>
+</html>
