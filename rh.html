@@ -11,8 +11,7 @@
         scrollbar-width: none;
     }
     body {
-      background-image: url('pic.png');
-      background-color: #000000;
+      background-color: #252525;
       background-repeat: no-repeat;
       background-size: cover;
       background-attachment: fixed;
@@ -114,6 +113,7 @@ p {
 
 
 
+
 .header .logo-container .site-title .first-letter {
   font-family: 'Alex Brush', cursive;
   font-size: 1.5rem;
@@ -140,118 +140,128 @@ p {
   width: auto;
 }
 
-
- 
-
-
-
-
-
-.container1
-{
-  box-shadow: 2px 2px 2px 4px rgb(0, 0, 0);
-  padding:10px 10px 10px 10px;
-  justify-content: right;
-  display: flex;
-  align-items: left;
-  background-color:#4b4949;
-  width: 1280px;
-  height: 616px;
-  margin-bottom: 75px;
-position: relative;
-  text-overflow: ellipsis; /* Show ellipsis (...) for text that overflows */
-              white-space: nowrap; /* Prevent text from wrapping */
-            text-overflow: ellipsis;
-            justify-content: center; /* Horizontally center the content */
-            align-items: center; /* Vertically center the content */
-}
-iframe {
-  width: 100%;
-  height: 100%;
-}
-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none; /* Allow clicks to pass through the image to the iframe */
-}
-
 h1
 {
   text-align: center;
   align-items: center;
   color: #ffffff;
   margin-top: 20px;
+  width: 100%;
+  height: auto;
 
 }
-.p{
-  text-align: left;
-  padding-left: 25%;
-  color: #ffffff; /* Text color for paragraph */
-  white-space: normal; /* Allow text to wrap within the container */
-  overflow: hidden; /* Prevent overflow */
-  text-overflow: ellipsis; /* Show ellipsis (...) for text that overflows */
 
+ 
+
+
+.container1 {
+    display: flex;
+    flex-direction: column; /* Stack the iframe and sub-cc vertically */
+    align-items: center;
+    padding:10px 10px 10px 10px;
+    justify-content: right;
+    display: flex;
+    align-items: left;
+    width: 70%;
+    height: auto;
+    margin-bottom: 75px;
+  position: relative;
+    text-overflow: ellipsis; /* Show ellipsis (...) for text that overflows */
+                white-space: nowrap; /* Prevent text from wrapping */
+              text-overflow: ellipsis;
+              justify-content: center; /* Horizontally center the content */
+              align-items: center; /* Vertically center the content */
 }
-.sub-c
-{
-  background-color: #3d3d3d;
-  height: 515px;
-  width: 414px;
-margin-right: auto;
-margin-left: 20px;
-background-image: url('rh.jpg');
-background-size: cover;
-position: relative;
-}
-.sub-cc
-{
+
+.sub-cc {
     background-color: #4b4949;
-    height: 100%;
-    max-width : 70%;
-    margin-right: auto;
-    margin-left: 20px;
-    background-size: cover;
-    position: relative;
-    overflow: hidden; /* Add this line to prevent overflow */
+    max-width: 100%;
+    padding: 20px;
+    max-height: auto;
+    border-radius: 5px;
+    overflow: hidden; /* Prevent overflow */
+    margin-top: 20px; /* Adjust margin as needed */
+
+    background-color: #4b4949;
+    height: auto;
+    width: 100%;
     padding: 20px;
     border-radius: 5px;
-    overflow: hidden; /* Hide overflow content */
+    
+  overflow: hidden; /* Prevent overflow */
+}
 
-  
-  
-}
-#videoFrame{
-background-image: url('sa.jpg');
-background-size: cover;
-width: 100%;
-height : 100%;
-}
+
+
 .sub-cc h1{
-  text-align: center;
-  margin-right: auto;
-  padding-top: 20px;
-  padding-right: 25%; 
+    text-align: center;
+    margin-right: auto;
+    padding-top: 20px;
+    padding-right: 25%; 
+    justify-content: center;
+    align-items: center;
+    padding-left: 150px;
+  }
+  .sub-cc p{
+    color: #928f8f;
+    font-size: 26px;
+    line-height: 1.1;
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+    
+    word-wrap: break-word; /* For older browsers */
+    overflow-wrap: break-word; /* Ensure that words break at the edges of the container */
+    white-space: pre-wrap; /* Allow wrapping at any character (including whitespace) */
+  }
+  .sub-cc p1{
+    color: #ffffff;
+    font-size: x-large;
+    font-family: 'Roboto', sans-serif; /* Use Roboto font */
+    
+    word-wrap: break-word; /* For older browsers */
+    overflow-wrap: break-word; /* Ensure that words break at the edges of the container */
+    white-space: pre-wrap; /* Allow wrapping at any character (including whitespace) */
+  
+  }
+  /* Change font size based on screen resolution */
+  
+  @media only screen and (max-width: 700px) {
+    /* Adjust iframe dimensions when screen size is less than 700px */
+    #videoFrame {
+        width: 100%; /* Set width to 100% */
+        height: 250px; /* Set a fixed height or adjust as needed */
+    }
+    .sub-cc h1{
+        text-align: center;
+        margin-right: auto;
+        padding-top: 5px;
+        padding-right: 25%; 
+        justify-content: center;
+        align-items: center;
+        padding-left: 120px;
+      }
+      .sub-cc p{
+        color: #928f8f;
+        font-size: 16px;
+        line-height: 1.1;
+        margin: 0; /* Reset margin */
+        padding: 0; /* Reset padding */
+        
+        word-wrap: break-word; /* For older browsers */
+        overflow-wrap: break-word; /* Ensure that words break at the edges of the container */
+        white-space: pre-wrap; /* Allow wrapping at any character (including whitespace) */
+      }
+      .sub-cc p1{
+        color: #ffffff;
+        font-size: large;
+        font-family: 'Roboto', sans-serif; /* Use Roboto font */
+        
+        word-wrap: break-word; /* For older browsers */
+        overflow-wrap: break-word; /* Ensure that words break at the edges of the container */
+        white-space: pre-wrap; /* Allow wrapping at any character (including whitespace) */
+      
+      }
 }
-.sub-cc p{
-  color: #928f8f;
-  font-size: 26px;
-  line-height: 1.5;
-  margin: 0; /* Reset margin */
-  padding: 0; /* Reset padding */
-}
-.sub-cc p1{
-  color: #ffffff;
-  font-size: x-large;
-  font-family: 'Roboto', sans-serif; /* Use Roboto font */
-
-}
-
-
-
-
 
 
     </style>
@@ -287,28 +297,182 @@ height : 100%;
 
             
            
+    <div class="container1">
+        <iframe id="videoFrame" src="https://www.2embed.cc/embed/tt3359350?autoplay=1&mute=0" width="100%" height="616px" autoplay scrolling="no" allow="autoplay" allowfullscreen></iframe>
+    
+        <div class="sub-cc">
+            <h1>Road House</h1>
+            <p>Ex-UFC fighter Dalton takes a job as a bouncer at a Florida Keys roadhouse, only to discover that this paradise is not all it seems.</p><br>
+            <p1>IMDb Rating: ⭐️⭐️⭐️⭐️⭐️8.5/10</p1><br>
+            <p1>Actors: Jake Gyllenhaal, Daniela Melchior, Conor McGregor (film debut), Billy Magnussen, Jessica Williams</p1><br>
+            <p1>Duration: 167</p1><br>
+            <p1>Quality: HD</p1><br>
+            <p1>Release: 2024</p1><br>
         </div>
-         <div class="container1">
+    </div>
 
-              <iframe id="videoFrame" src="https://www.2embed.cc/embed/tt3359350?autoplay=1&mute=0" width="1260px" height="616px" autoplay  scrolling="no" allow="autoplay" allowfullscreen></iframe>
+    <div class="content">
+          <div class="container2">
+            <div class="sub" onclick="window.location.href='roadh.html';" style="background-image: url('mv.png');">
+              <div class="txt">
+                <h2>Road House (2024)</h2>
+              </div>
+              <div class="play-icon"></div>
+            </div>
+            <div class="sub" onclick="window.location.href='Login.html';" style="background-image: url('pt.jpg');">
+              <div class="txt">
+                <h2>Poor Things(2023)</h2>
+              </div>
+              <div class="play-icon"></div>
+            </div>
+            <div class="sub" onclick="window.location.href='Login.html';" style="background-image: url('sa.jpg');">
+              <div class="txt">
+                <h2>Spider-Man: Across the Spider-Verse (2022)</h2>
+              </div>
+              <div class="play-icon"></div>
+            </div>
+            <div class="sub" onclick="window.location.href='Login.html';" style="background-image: url('si.jpg');">
+              <div class="txt">
+                <h2>Spider-Man: into the Spider-Verse (2018)</h2>
+              </div>
+              <div class="play-icon"></div>
+            </div>
+            <div class="sub" onclick="window.location.href='Login.html';" style="background-image: url('mv.png');">
+              <div class="txt">
+                <h2>Road House (2024)</h2>
+              </div>
+              <div class="play-icon"></div>
+            </div>
+            <div class="sub" onclick="window.location.href='Login.html';" style="background-image: url('mv.png');">
+              <div class="txt">
+                <h2>Road demo (2024)</h2>
+              </div>
+              <div class="play-icon"></div>
+            </div>
+            <div class="sub" onclick="window.location.href='Login.html';" style="background-image: url('mv.png');">
+              <div class="txt">
+                <h2>Road House (2024)</h2>
+              </div>
+              <div class="play-icon"></div>
+            </div>
+            <div class="sub" onclick="window.location.href='Login.html';" style="background-image: url('mv.png');">
+              <div class="txt">
+                <h2>Road House (2024)</h2>
+              </div>
+              <div class="play-icon"></div>
+            </div><div class="sub" onclick="window.location.href='Login.html';" style="background-image: url('mv.png');">
+              <div class="txt">
+                <h2>Road House (2024)</h2>
+              </div>
+              <div class="play-icon"></div>
+            </div><div class="sub" onclick="window.location.href='Login.html';" style="background-image: url('mv.png');">
+              <div class="txt">
+                <h2>Road House (2024)</h2>
+              </div>
+              <div class="play-icon"></div>
+            </div><div class="sub" onclick="window.location.href='Login.html';" style="background-image: url('mv.png');">
+              <div class="txt">
+                <h2>Road House (2024)</h2>
+              </div>
+              <div class="play-icon"></div>
+            </div><div class="sub" onclick="window.location.href='Login.html';" style="background-image: url('mv.png');">
+              <div class="txt">
+                <h2>Road House (2024)</h2>
+              </div>
+              <div class="play-icon"></div>
+            </div>
+          </div>
+    </div>
+
+    
+          <style>
             
-          
-                 </div>
- <div class="container1"  >        
-  <div class="sub-c"></div>
-  <div class="sub-cc">
-    <h1>Road House</h1>
-    <p>
-      Ex-UFC fighter Dalton takes a job as a bouncer at a Florida Keys<br> roadhouse, only to discover that this paradise is not all it seems.
-    </p>
-    <br>
-    <p1>IMDb Rating: ⭐️⭐️⭐️⭐️⭐️8.5/10</p1><br><br>
-    <p1>Actors: Jake Gyllenhaal,Daniela Melchior,Conor McGregor <br>(film debut),Billy Magnussen,Jessica Williams</p1>
-
-  </div>
-
-</div> 
-          
+.container2 {
+    display: grid;
+    grid-gap: 20px;
+    padding: 20px;
+    border-radius: 5%;
+    max-width: 100%; /* Adjusted maximum width for responsiveness */
+    max-width: 100%;
+    background-color: #252525;
+    align-items: center;
+    justify-items: center; /* Center grid items horizontally */
+    overflow-x: auto; /* Add horizontal scrollbar if content overflows */
+    overflow-y: auto; /* Add vertical scrollbar if content overflows */
+  }
+  
+  .sub {
+    flex: 1; /* Each box takes equal width */
+    box-shadow: 0.5px 0.5px 0.5px 0.5px rgb(0, 0, 0);
+    position: relative;
+    padding: 20px;
+    border-radius: 2%;
+    max-width: 100%;
+    box-sizing: border-box;
+    width: 100%; /* Ensure grid items take full width */
+    height: 215px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+  
+  .txt
+  {
+    text-align: center;
+    background-color: rgba(18, 17, 17, 0.6);
+    position: absolute;
+    font-size: 0.5rem;
+    bottom: 0%;
+    width: 1050px;
+    height: auto;
+    left:50%;
+    max-width: 100%;
+    transform: translate(-50%, -50%); 
+    padding-bottom: auto;
+    padding-top: auto;
+    display: grid;
+   opacity: 10;
+   align-items: center;
+   transition: opacity 0.3s ease;
+  }
+  
+  
+  
+  
+  
+  .sub:hover .overlay {
+    opacity: 1; /* Show the overlay when hovering over sub box */
+  }
+  
+  .sub:last-child {
+    margin-right: 0; /* Remove margin from the last box in each row */
+  }
+  .play-icon {
+    display: none; /* Initially hide the play icon */
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    top: 0; /* Position relative to the parent */
+    left: 0; /* Position relative to the parent */
+    width: 100%; /* Match the width of the parent */
+    height: 100%; /* Match the height of the parent */
+    background-image: url('play.png'); /* Replace 'play_icon.png' with your play icon image */
+    background-size: contain; /* Ensure the play icon fits within its container */
+    background-repeat: no-repeat; /* Prevent the play icon from repeating */
+    background-position: center; /* Center the play icon */
+  }
+  .sub:hover .play-icon {
+    display: block; /* Show the play icon when hovering over sub box */
+  }
+  .buffering {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(0, 0, 0, 0.7); /* Adjust border color and width as needed */
+    border-radius: 50%;
+    animation: spin 1s linear infinite; /* Apply the animation */
+  }
+          </style>
           
   
     
@@ -413,6 +577,163 @@ adjustButtonFontSize();
 
 // Add event listener to adjust button font size on window resize
 window.addEventListener('resize', adjustButtonFontSize);
+
+
+
+
+
+
+function adjustGrid() {
+    var container = document.querySelector('.container2');
+    var h1Element = document.querySelector('h1');
+
+    var sub = document.querySelector('.sub');
+    var hd = document.querySelector('.header');
+    var screenWidth = window.innerWidth;
+
+    var buttons = document.querySelectorAll('.button-group');
+    buttons.forEach(function(buttongroup) {
+        buttongroup.style.justifyContent = 'center'; // This line centers the buttons horizontally
+    });
+    var logoContainers = document.querySelectorAll('.logo-container');
+logoContainers.forEach(function(logoContainer) {
+logoContainer.style.justifyContent = 'center'; // This line centers the content horizontally
+});
+
+
+
+    // Adjust grid columns based on screen width
+    if (screenWidth <= 700) {
+        container.style.gridTemplateColumns = 'repeat(2, 1fr)';
+        container.style.maxWidth = '1300px'; // Adjust container width as needed
+         // Loop through each sub element and adjust styles
+      var subs = container.querySelectorAll('.sub');
+      h1Element.style.fontSize = '0.9rem'; // Adjust font size as needed
+
+      subs.forEach(function(sub) {
+        sub.style.height = '220px';
+        sub.style.width = '160px';
+      });
+        hd.style.maxWidth = '1200px'; // Adjust header width if necessary
+         // Adjust overflow property of the container
+      container.style.overfloX = 'auto'; // Change overflow to auto
+      container.style.overflowY = 'auto'; // Change overflow to auto
+
+    } 
+    else if (screenWidth > 700 && screenWidth <= 900) { // Adjusted screen width range
+      container.style.gridTemplateColumns = 'repeat(3, 1fr)';
+      container.style.maxWidth = '1800px'; // Adjust container width as needed
+
+      // Loop through each sub element and adjust styles
+      var subs = container.querySelectorAll('.sub');
+      subs.forEach(function(sub) {
+          sub.style.height = '260px';
+          sub.style.width = '200px';
+      });
+
+      hd.style.maxWidth = '1200px'; // Adjust header width if necessary
+
+      // Adjust overflow property of the container
+      container.style.overfloX = 'auto'; // Change overflow to auto
+      container.style.overflowY = 'auto'; // Change overflow to auto
+
+
+  } 
+  else if (screenWidth > 900 && screenWidth <= 1200) { // Adjusted screen width range
+        container.style.gridTemplateColumns = 'repeat(4, 1fr)';
+        container.style.maxWidth = '1800px'; // Adjust container width as needed
+
+        // Loop through each sub element and adjust styles
+        var subs = container.querySelectorAll('.sub');
+        subs.forEach(function(sub) {
+            sub.style.height = '260px';
+            sub.style.width = '200px';
+        });
+
+        hd.style.maxWidth = '1200px'; // Adjust header width if necessary
+
+        // Adjust overflow property of the container
+        container.style.overfloX = 'auto'; // Change overflow to auto
+        container.style.overflowY = 'auto'; // Change overflow to auto
+
+
+    } 
+
+    else if(screenWidth > 1200 && screenWidth <= 1300){
+      container.style.gridTemplateColumns = 'repeat(5, 1fr)';
+      container.style.maxWidth = '2200px'; // Adjust container width as needed
+
+      // Loop through each sub element and adjust styles
+      var subs = container.querySelectorAll('.sub');
+      subs.forEach(function(sub) {
+          sub.style.height = '320px';
+          sub.style.width = '200px';
+      });
+
+      hd.style.maxWidth = '2800px'; // Adjust header width if necessary
+  }
+  else if(screenWidth > 1300 && screenWidth <= 1600){
+    container.style.gridTemplateColumns = 'repeat(6, 1fr)';
+    container.style.maxWidth = '2200px'; // Adjust container width as needed
+
+    // Loop through each sub element and adjust styles
+    var subs = container.querySelectorAll('.sub');
+    subs.forEach(function(sub) {
+        sub.style.height = '320px';
+        sub.style.width = '200px';
+    });
+
+    hd.style.maxWidth = '2800px'; // Adjust header width if necessary
+}
+else if(screenWidth > 1600 && screenWidth <= 1900){
+  container.style.gridTemplateColumns = 'repeat(7, 1fr)';
+  container.style.maxWidth = '2200px'; // Adjust container width as needed
+
+  // Loop through each sub element and adjust styles
+  var subs = container.querySelectorAll('.sub');
+  subs.forEach(function(sub) {
+      sub.style.height = '320px';
+      sub.style.width = '200px';
+  });
+
+  hd.style.maxWidth = '2800px'; // Adjust header width if necessary
+}
+
+
+
+
+    else {
+        container.style.gridTemplateColumns = 'repeat(8, 1fr)';
+        container.style.maxWidth = '2200px'; // Adjust container width as needed
+
+        // Loop through each sub element and adjust styles
+        var subs = container.querySelectorAll('.sub');
+        subs.forEach(function(sub) {
+            sub.style.height = '320px';
+            sub.style.width = '200px';
+        });
+
+        hd.style.maxWidth = '2800px'; // Adjust header width if necessary
+    }
+}
+
+// Call the function initially
+adjustGrid();
+
+// Add event listener to adjust grid on window resize
+window.addEventListener('resize', adjustGrid);
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
