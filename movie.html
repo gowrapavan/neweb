@@ -11,6 +11,7 @@
         scrollbar-width: none;
     }
     body {
+      background-image: url('pic.png');
       background-color: #000000;
       background-repeat: no-repeat;
       background-size: cover;
@@ -32,10 +33,9 @@
     min-width: 0;
     top: 0;
     right: 0;
-    padding: 5px;
+    padding: 1px;
     background-color:transparent;
     background-color: rgba(32, 54, 83, 0.9);
-    border-radius: 50px 0 0 50px;
      box-shadow: 2px 2px 20px 4px rgb(90, 75, 75);
      width: 100%; /* Ensuring the header spans the full width of the screen */
     z-index: 100;
@@ -93,7 +93,7 @@ p {
     margin-right: 10px;
 }
 .button {
-    margin-left: 10px;
+    margin-left: 6px;
     color: #ffffff;
     padding: 0.5rem 1rem ;
     background-color: #000000;
@@ -123,19 +123,7 @@ p {
 
 
 
-.ybutton {
-  padding: 0.5rem 1rem  ;
-  
-  padding-top: 0.5rem;;
-  background-color: #666363;
-  border-radius: 10px 0px 10px 0px;
-  font-size: 1.3rem;
-  color: #ffffff;
-}
-.ybutton:hover {
-  background-color: #ffffff;
-  color: #030303;
-}
+
 
 main {
   padding-top: 50px; /* Add top padding to the main content area to account for the height of the header */
@@ -153,7 +141,7 @@ main {
 }
 .site-title {
   font-size: 1.5rem;
-  margin-left: 10px;
+  margin-left: 12px;
   text-transform: uppercase;
   color: #fefcfc;
 }
@@ -317,13 +305,13 @@ a:hover {
          
          
           <div class="container2">
-            <div class="sub" onclick="window.location.href='rh.html';" style="background-image: url('rh.jpg');">
+            <div class="sub" onclick="window.location.href='roadh.html';" style="background-image: url('mv.png');">
               <div class="txt">
                 <h2>Road House (2024)</h2>
               </div>
               <div class="play-icon"></div>
             </div>
-            <div class="sub" onclick="window.location.href='rh.html';" style="background-image: url('pt.jpg');">
+            <div class="sub" onclick="window.location.href='Login.html';" style="background-image: url('pt.jpg');">
               <div class="txt">
                 <h2>Poor Things(2023)</h2>
               </div>
@@ -391,7 +379,7 @@ a:hover {
 
           <div>
             <br><br>
-          </div><div>
+            <iframe src="https://www.2embed.cc/embed/tt15398776" width="600px" height="300px" frameborder="0" scrolling="no" allowfullscreen></iframe>          </div><div>
             <br><br>
           </div>
         </div>
@@ -458,60 +446,89 @@ a:hover {
 
    
       <script>
-// Function to adjust button font size based on screen width
-function adjustButtonFontSize() {
-  var buttons = document.querySelectorAll('.button');
-  var hd = document.querySelector('.header');
-  var siteTitle = document.querySelector('.site-title');
-  var h1Element = document.querySelector('h1');
-  var logo =document.querySelector('.logo-container');
-  var screenWidth = window.innerWidth;
+        // Function to adjust button font size based on screen width
+        function adjustButtonFontSize() {
+          var buttons = document.querySelectorAll('.button');
+          var hd = document.querySelector('.header');
+          var siteTitle = document.querySelector('.site-title');
+          var h1Element = document.querySelector('h1');
+          var logo =document.querySelector('.logo-container');
+          var ct1 =document.querySelector('.container1');
+          var ifr =document.querySelector('iframe');
+          var subc =document.querySelector('.logo-container');
+          var subcc =document.querySelector('.logo-container');
+          var screenWidth = window.innerWidth;
+        
+          // Check if screen width is less than 700px
+          if (screenWidth < 900) {
+            hd.style.justifyContent = 'center'; 
+              buttons.forEach(function(button) {
+                  button.style.fontSize = '0.5rem'; // Adjust font size as needed
+              });
+              ct1.style.maxWidth = '414px';
+              ct1.style.maxHeight = '212px';
+              ct1.style.overflow = 'scroll'; // Example: Setting overflow to 'scroll'
+              ifr.style.maxWidth = '214px';
+              ifr.style.maxHeight = '212px';
+        
+              siteTitle.style.fontSize = '0.5rem'; // Adjust font size as needed
+              h1Element.style.fontSize = '0.2rem'; // Adjust font size as needed
+              logo.style.fontSize = '0.7rem'; // Adjust font size as needed
+              hd.style.maxheight = '10px'; // Adjust header width if necessary
+        
+          } 
+          
+          else {
+              buttons.forEach(function(button) {
+                  button.style.fontSize = ''; // Reset font size if screen width is greater than or equal to 700px
+              });
+              hd.style.justifyContent = 'space-between'; // or any other value you prefer
+              h1Element.style.fontSize = ''; // Adjust font size as needed
+              logo.style.fontSize = ' '; // Adjust font size as needed
+              siteTitle.style.fontSize = ' '; // Adjust font size as needed
+        
+        
+          }
+        }
+        
+        // Call the function initially
+        adjustButtonFontSize();
+        
+        // Add event listener to adjust button font size on window resize
+        window.addEventListener('resize', adjustButtonFontSize);
 
-  // Check if screen width is less than 700px
-  if (screenWidth < 500) {
-    hd.style.justifyContent = 'center'; 
-      buttons.forEach(function(button) {
-          button.style.fontSize = '0.5rem'; // Adjust font size as needed
-      });
-      siteTitle.style.fontSize = '0.5rem'; // Adjust font size as needed
-      h1Element.style.fontSize = '1rem'; // Adjust font size as needed
-      logo.style.fontSize = '0.7rem'; // Adjust font size as needed
-      hd.style.maxheight = '10px'; // Adjust header width if necessary
-
-  } 
-  
-  else {
-      buttons.forEach(function(button) {
-          button.style.fontSize = ''; // Reset font size if screen width is greater than or equal to 700px
-      });
-      hd.style.justifyContent = 'space-between'; // or any other value you prefer
-      h1Element.style.fontSize = ''; // Adjust font size as needed
-      logo.style.fontSize = ' '; // Adjust font size as needed
-      siteTitle.style.fontSize = ' '; // Adjust font size as needed
 
 
-  }
-}
 
-// Call the function initially
-adjustButtonFontSize();
 
-// Add event listener to adjust button font size on window resize
-window.addEventListener('resize', adjustButtonFontSize);
 
 
         function adjustGrid() {
             var container = document.querySelector('.container2');
+            var h1Element = document.querySelector('h1');
+
             var sub = document.querySelector('.sub');
             var hd = document.querySelector('.header');
             var screenWidth = window.innerWidth;
-    
+
+         
             // Adjust grid columns based on screen width
             if (screenWidth <= 700) {
                 container.style.gridTemplateColumns = 'repeat(2, 1fr)';
                 container.style.maxWidth = '1300px'; // Adjust container width as needed
                  // Loop through each sub element and adjust styles
               var subs = container.querySelectorAll('.sub');
+              h1Element.style.fontSize = '0.9rem'; // Adjust font size as needed
+                 var buttons = document.querySelectorAll('.button-group');
+            buttons.forEach(function(buttongroup) {
+                buttongroup.style.justifyContent = 'center'; // This line centers the buttons horizontally
+            });
+            var logoContainers = document.querySelectorAll('.logo-container');
+logoContainers.forEach(function(logoContainer) {
+    logoContainer.style.justifyContent = 'center'; // This line centers the content horizontally
+});
+
+
               subs.forEach(function(sub) {
                 sub.style.height = '220px';
                 sub.style.width = '160px';
