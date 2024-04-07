@@ -511,15 +511,7 @@ a:hover {
             var hd = document.querySelector('.header');
             var screenWidth = window.innerWidth;
 
-         
-            // Adjust grid columns based on screen width
-            if (screenWidth <= 700) {
-                container.style.gridTemplateColumns = 'repeat(2, 1fr)';
-                container.style.maxWidth = '1300px'; // Adjust container width as needed
-                 // Loop through each sub element and adjust styles
-              var subs = container.querySelectorAll('.sub');
-              h1Element.style.fontSize = '0.9rem'; // Adjust font size as needed
-                 var buttons = document.querySelectorAll('.button-group');
+            var buttons = document.querySelectorAll('.button-group');
             buttons.forEach(function(buttongroup) {
                 buttongroup.style.justifyContent = 'center'; // This line centers the buttons horizontally
             });
@@ -528,6 +520,14 @@ logoContainers.forEach(function(logoContainer) {
     logoContainer.style.justifyContent = 'center'; // This line centers the content horizontally
 });
 
+
+            // Adjust grid columns based on screen width
+            if (screenWidth <= 700) {
+                container.style.gridTemplateColumns = 'repeat(2, 1fr)';
+                container.style.maxWidth = '1300px'; // Adjust container width as needed
+                 // Loop through each sub element and adjust styles
+              var subs = container.querySelectorAll('.sub');
+              h1Element.style.fontSize = '0.9rem'; // Adjust font size as needed
 
               subs.forEach(function(sub) {
                 sub.style.height = '220px';
