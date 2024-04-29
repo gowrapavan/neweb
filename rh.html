@@ -151,7 +151,9 @@ h1
 
 }
 
- 
+ #iframe{
+  height: 180px ;
+ }
 
 
 .container1 {
@@ -229,7 +231,10 @@ h1
     /* Adjust iframe dimensions when screen size is less than 700px */
     #videoFrame {
         width: 100%; /* Set width to 100% */
-        height: 250px; /* Set a fixed height or adjust as needed */
+        height: 200px; /* Set a fixed height or adjust as needed */
+    }
+    .container1{
+      width: 95%;
     }
     .sub-cc h1{
         text-align: center;
@@ -263,12 +268,41 @@ h1
       }
     
 }
+@media only screen and (max-width: 800px) {
+  #videoFrame {
+    width: 100%;
+    height: 250px; /* Set a fixed height or adjust as needed */
+}
+.container1{
+  width: 85%;
+}
+}
 
+@media only screen and (max-width: 1580px) {
+  #videoFrame {
+    width: 100%;
+    height: 350px; /* Set a fixed height or adjust as needed */
+}
+.container1{
+  width: 85%;
+}
+}@media only screen and (max-width: 2080px) {
+  #videoFrame {
+    width: 100%;
+    height: 350px; /* Set a fixed height or adjust as needed */
+}
+.container1{
+  width: 65%;
+}
+}
 @media only screen and (max-width: 500px) {
     /* Adjust iframe dimensions when screen size is less than 700px */
     #videoFrame {
         width: 100%; /* Set width to 100% */
         height: 200px; /* Set a fixed height or adjust as needed */
+    }
+    .container1{
+      width: 100%;
     }
     .sub-cc h1{
         text-align: center;
@@ -308,6 +342,33 @@ h1
 
     </style>
 </head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <body>
     <div class="header">
         
@@ -351,38 +412,8 @@ h1
             <p1>Quality: HD</p1><br>
             <p1>Release: 2024</p1><br>
         </div>
-    </div> 
-
-
-<div class="container1">
-    <video controls>
-        <source src="https://www.2embed.cc/embed/tt3359350?autoplay=1&mute=0" type="video/mp4">
-        <track src="your-subtitle-url.vtt" kind="subtitles" srclang="en" label="English">
-        Your browser does not support the video tag.
-    </video>
-
-    <div class="sub-cc">
-        <h1>Road House</h1>
-        <p>Ex-UFC fighter Dalton takes a job as a bouncer at a Florida Keys roadhouse, only to discover that this paradise is not all it seems.</p>
-        <p1>IMDb Rating: ⭐️⭐️⭐️⭐️⭐️8.5/10</p1>
-        <!-- Other video details here -->
     </div>
-</div>
 
-
- <div class="container1">
-      <iframe src="https://www.2embed.cc/embed/tt15239678" width="100%" height="100%" frameborder="0" scrolling="no" allowfullscreen></iframe>
-
-        <div class="sub-cc">
-            <h1>Road House</h1>
-            <p>Ex-UFC fighter Dalton takes a job as a bouncer at a Florida Keys roadhouse, only to discover that this paradise is not all it seems.</p><br>
-            <p1>IMDb Rating: ⭐️⭐️⭐️⭐️⭐️8.5/10</p1><br>
-            <p1>Actors: Jake Gyllenhaal, Daniela Melchior, Conor McGregor (film debut), Billy Magnussen, Jessica Williams</p1><br>
-            <p1>Duration: 167</p1><br>
-            <p1>Quality: HD</p1><br>
-            <p1>Release: 2024</p1><br>
-        </div>
-    </div>
     <div class="content">
           <div class="container2">
             <div class="sub" onclick="window.location.href='roadh.html';" style="background-image: url('mv.png');">
@@ -457,6 +488,32 @@ h1
     </div>
 
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
           <style>
             
 .container2 {
@@ -690,6 +747,7 @@ logoContainer.style.justifyContent = 'center'; // This line centers the content 
          // Adjust overflow property of the container
       container.style.overfloX = 'auto'; // Change overflow to auto
       container.style.overflowY = 'auto'; // Change overflow to auto
+      
 
     } 
     else if (screenWidth > 700 && screenWidth <= 900) { // Adjusted screen width range
@@ -708,7 +766,6 @@ logoContainer.style.justifyContent = 'center'; // This line centers the content 
       // Adjust overflow property of the container
       container.style.overfloX = 'auto'; // Change overflow to auto
       container.style.overflowY = 'auto'; // Change overflow to auto
-
 
   } 
   else if (screenWidth > 900 && screenWidth <= 1200) { // Adjusted screen width range
